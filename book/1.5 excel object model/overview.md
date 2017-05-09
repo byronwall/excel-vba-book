@@ -31,3 +31,6 @@ Application
 
 The object model is much easier to work through when declaring variables correctly.  There are a handful of spots (especially with arrays/collections) where the returned object is not helped by Intellisense.
 
+Most objects have a `Name` and `Value` which typically return what you expect.
+
+Maybe a different section, but creating Workbooks and Worksheets on demand is a powerful tool that is at the core of a lot of processing type macros.

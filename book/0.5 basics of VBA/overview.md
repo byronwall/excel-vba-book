@@ -7,14 +7,13 @@ section on VBA topics should include:
   * difference between value and reference types
 * basics of control structure
   * if
-  * switch
+  * select case
   * for loop
   * foreach loop
   * do/while loops
   * goto
 * error handling
 * Subs and Functions
-* adding references to other objects (specifically Office and Microsoft Runtime)
 
 most of this seciton is going to be boilerplate explanation of these things
 
@@ -24,3 +23,4 @@ later on, there should be an advaned VBA section to handle:
 
 * classes
 * events
+* adding references to other objects (specifically Office and Microsoft Runtime)
