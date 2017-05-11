@@ -24,3 +24,5 @@ later on, there should be an advaned VBA section to handle:
 * classes
 * events
 * adding references to other objects (specifically Office and Microsoft Runtime)
+
+The pitfalls of running macros and how they destroy the undo functionality.
