@@ -1,0 +1,1 @@
+pandoc ../book/**/*.md -o ../builds/book.pdf
