@@ -4,7 +4,7 @@ Advanced processing should include some recipe type sections that go through the
 
 This could focus on:
 
-* Speed improvements and how to do it (disable screen, events, calcualtion) and how to undo it
+* Speed improvements and how to do it (disable screen, events, calculation) and how to undo it
 * Working with arrays of values instead of outputting a cell at a time
 * Cranking through an entire automated workflow without user interaction: creating new workbooks, worksheets, charts, formulas and then outputting it all to PDF
 * Focus on the interplay of manual steps and code (sometimes you have to run part of the code to see what to do next; other times you can sit down and type the whole thing out)
@@ -18,5 +18,6 @@ This could focus on:
 * Running through a folder or batch of files and doing something with each one
 * Structuring code in a way that the different pieces can be called on their own
 * Going through a workflow that involves using other office products
+* Strategy for identifying cells using Styles and working through them; effectively a tag feature
 
-The long list of sections here says that maybe there is enough code to put together a couple of "case study" type things that break down the development of an entire workflow.  This could be something from TDA related to charting/processsing or some other thing.
+The long list of sections here says that maybe there is enough code to put together a couple of "case study" type things that break down the development of an entire workflow.  This could be something from TDA related to charting/processing or some other thing.

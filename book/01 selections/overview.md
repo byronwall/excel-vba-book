@@ -22,6 +22,7 @@ The selections chapter needs to focus on the ways to access Ranges from VBA.  Th
 * using `Find`
 * using `UsedRange`
 * using `Application.Index` (or is it only WorksheetFunctions?)
+* using `CurrentArray`
 
 ## some common patterns combinign these techniques
 
