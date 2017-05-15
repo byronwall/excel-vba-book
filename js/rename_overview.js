@@ -30,8 +30,6 @@ files.every(function (element) {
     if (fs.existsSync(overviewFile)) {
         //do the rename
         fs.rename(overviewFile, overviewFile.replace("overview", "00 overview"));
-
-        return true;
     }
 
     return true;
