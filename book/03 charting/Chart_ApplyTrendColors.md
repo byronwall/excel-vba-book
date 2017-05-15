@@ -1,12 +1,8 @@
+## Chart_ApplyTrendColors.md
+
 ```vb
 Public Sub Chart_ApplyTrendColors()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Chart_ApplyTrendColors
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Applies the predetermined chart colors to each series
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetObject As ChartObject
     For Each targetObject In Chart_GetObjectsFromObject(Selection)
 

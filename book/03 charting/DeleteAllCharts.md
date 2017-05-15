@@ -1,12 +1,8 @@
+## DeleteAllCharts.md
+
 ```vb
 Public Sub DeleteAllCharts()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : DeleteAllCharts
-    ' Author    : @byronwall
-    ' Date      : 2015 08 11
-    ' Purpose   : Helper Sub to delete all charts on ActiveSheet
-    '---------------------------------------------------------------------------------------
-    '
+
     If MsgBox("Delete all charts?", vbYesNo) = vbYes Then
         Application.ScreenUpdating = False
 

@@ -1,12 +1,8 @@
+## ExtendArrayFormulaDown.md
+
 ```vb
 Public Sub ExtendArrayFormulaDown()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : ExtendArrayFormulaDown
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Takes an array formula and extends it down as far as the range on its right goes
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim startingRange As Range
     Dim targetArea As Range
 

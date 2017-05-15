@@ -1,13 +1,8 @@
+## Selection_ColorWithHex.md
+
 ```vb
 Public Sub Selection_ColorWithHex()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Selection_ColorWithHex
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Colors a targetCell based on the hex value stored in the targetCell
-    ' Flag      : new-feature
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetCell As Range
     Dim targetRange As Range
     On Error GoTo errHandler

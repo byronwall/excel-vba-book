@@ -1,12 +1,8 @@
+## LockAllSheets.md
+
 ```vb
 Public Sub LockAllSheets()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : LockAllSheets
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Locks all sheets with the same password
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim userPassword As Variant
     userPassword = Application.InputBox("Password to lock")
 

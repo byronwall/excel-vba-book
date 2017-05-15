@@ -1,12 +1,8 @@
+## SplitIntoRows.md
+
 ```vb
 Public Sub SplitIntoRows()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : SplitIntoRows
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Splits a targetCell with return characters into multiple rows with no returns
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim outputRange As Range
 
     Dim inputRange As Range

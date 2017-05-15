@@ -1,13 +1,8 @@
+## Chart_TrendlinesToAverage.md
+
 ```vb
 Public Sub Chart_TrendlinesToAverage()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Chart_TrendlinesToAverage
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Creates a trendline using a moving average instead of linear
-    ' Flag      : new-feature
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetObject As ChartObject
 
     For Each targetObject In Chart_GetObjectsFromObject(Selection)

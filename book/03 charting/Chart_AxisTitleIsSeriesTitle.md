@@ -1,12 +1,8 @@
+## Chart_AxisTitleIsSeriesTitle.md
+
 ```vb
 Public Sub Chart_AxisTitleIsSeriesTitle()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Chart_AxisTitleIsSeriesTitle
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Sets the y axis title equal to the series name of the last series
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetObject As ChartObject
     Dim targetChart As Chart
     For Each targetObject In Chart_GetObjectsFromObject(Selection)

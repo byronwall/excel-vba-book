@@ -1,12 +1,8 @@
+## Colorize.md
+
 ```vb
 Public Sub Colorize()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Colorize
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Creates an alternating color band based on targetCell values
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetRange As Range
     On Error GoTo errHandler
     Set targetRange = GetInputOrSelection("Select range to color")

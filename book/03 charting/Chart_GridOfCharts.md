@@ -1,3 +1,5 @@
+## Chart_GridOfCharts.md
+
 ```vb
 Public Sub Chart_GridOfCharts( _
     Optional columnCount As Long = 3, _
@@ -7,13 +9,7 @@ Public Sub Chart_GridOfCharts( _
     Optional offsetHorizontal As Double = 40, _
     Optional shouldFillDownFirst As Boolean = False, _
     Optional shouldZoomOnGrid As Boolean = False)
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Chart_GridOfCharts
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Creates a grid of charts.  Used by the form.
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetObject As ChartObject
 
     Dim targetSheet As Worksheet

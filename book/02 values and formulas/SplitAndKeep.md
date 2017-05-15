@@ -1,12 +1,8 @@
+## SplitAndKeep.md
+
 ```vb
 Public Sub SplitAndKeep()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : SplitAndKeep
-    ' Author    : @byronwall
-    ' Date      : 2015 08 12
-    ' Purpose   : Reduces a targetCell's value to one item returned from Split
-    '---------------------------------------------------------------------------------------
-    '
+
     On Error GoTo SplitAndKeep_Error
 
     Dim rangeToSplit As Range

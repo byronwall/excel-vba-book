@@ -1,13 +1,8 @@
+## Chart_TimeSeries_FastCreation.md
+
 ```vb
 Public Sub Chart_TimeSeries_FastCreation()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Chart_TimeSeries_FastCreation
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : this will create a fast set of charts from a block of data
-    ' Flag      : not-used
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim rangeOfDates As Range
     Dim dataRange As Range
     Dim rangeOfTitles As Range

@@ -1,12 +1,8 @@
+## CopyCellAddress.md
+
 ```vb
 Public Sub CopyCellAddress()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : CopyCellAddress
-    ' Author    : @byronwall
-    ' Date      : 2015 12 03
-    ' Purpose   : Copies the current cell address to the myClipboard for paste use in a formula
-    '---------------------------------------------------------------------------------------
-    '
+
 
     'TODO: this need to get a button or a keyboard shortcut for easy use
     Dim myClipboard As MSForms.DataObject

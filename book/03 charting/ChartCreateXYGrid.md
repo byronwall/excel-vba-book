@@ -1,12 +1,8 @@
+## ChartCreateXYGrid.md
+
 ```vb
 Public Sub ChartCreateXYGrid()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : ChartCreateXYGrid
-    ' Author    : @byronwall
-    ' Date      : 2015 08 11
-    ' Purpose   : Creates a matrix of charts similar to pairs in R
-    '---------------------------------------------------------------------------------------
-    '
+
     On Error GoTo ChartCreateXYGrid_Error
 
     DeleteAllCharts

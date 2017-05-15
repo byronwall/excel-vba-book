@@ -1,13 +1,8 @@
+## ColorInputs.md
+
 ```vb
 Public Sub ColorInputs()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : ColorInputs
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Finds cells with no value and colors them based on having a formula?
-    ' Flag      : new-feature
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetCell As Range
     Const FIRST_COLOR_ACCENT As String = "msoThemeColorAccent1"
     Const SECOND_COLOR_ACCENT As String = "msoThemeColorAccent2"

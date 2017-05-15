@@ -1,12 +1,8 @@
+## UnlockAllSheets.md
+
 ```vb
 Public Sub UnlockAllSheets()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : UnlockAllSheets
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Unlocks all sheets with the same password
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim userPassword As Variant
     userPassword = Application.InputBox("Password to unlock")
     

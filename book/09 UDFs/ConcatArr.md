@@ -1,3 +1,5 @@
+## ConcatArr.md
+
 ```vb
 Public Function ConcatArr(rngCells As Variant, strDelim As String) As String
     Dim cellCount As Long

@@ -1,13 +1,8 @@
+## Chart_GetObjectsFromObject.md
+
 ```vb
 Public Function Chart_GetObjectsFromObject(ByVal inputObject As Object) As Variant
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Chart_GetObjectsFromObject
-    ' Author    : @byronwall
-    ' Date      : 2015 12 30
-    ' Purpose   : Helper function which finds a valid ChartObject based on what is actually selected
-    '             Returns a Collection (possibly empty) and should be handled with a For Each
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim chartObjectCollection As New Collection
 
     'NOTE that this function does not work well with Axis objects.  Excel does not return the correct Parent for them.

@@ -1,13 +1,8 @@
+## OutputColors.md
+
 ```vb
 Public Sub OutputColors()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : OutputColors
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Outputs the list of chart colors available
-    ' Flag      : not-used
-    '---------------------------------------------------------------------------------------
-    '
+
     Const MINIMUM_INTEGER As Long = 1
     Const MAXIMUM_INTEGER As Long = 10
     Dim i As Long

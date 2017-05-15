@@ -1,12 +1,8 @@
+## Chart_TimeSeries.md
+
 ```vb
 Public Sub Chart_TimeSeries(ByVal rangeOfDates As Range, ByVal dataRange As Range, ByVal rangeOfTitles As Range)
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Chart_TimeSeries
-    ' Author    : @byronwall
-    ' Date      : 2015 12 30
-    ' Purpose   : Helper Sub to create a set of charts with the same x axis and varying y
-    '---------------------------------------------------------------------------------------
-    '
+
     Application.ScreenUpdating = False
     Const MARKER_SIZE As Long = 3
     Dim majorGridlineColor As Long

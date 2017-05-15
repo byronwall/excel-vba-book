@@ -1,13 +1,8 @@
+## Chart_YAxisRangeWithAvgAndStdev.md
+
 ```vb
 Public Sub Chart_YAxisRangeWithAvgAndStdev()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Chart_YAxisRangeWithAvgAndStdev
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Sets a chart's Y axis to a number of standard deviations
-    ' Flags     : not-used
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim numberOfStdDevs As Double
 
     numberOfStdDevs = CDbl(InputBox("How many standard deviations to include?"))

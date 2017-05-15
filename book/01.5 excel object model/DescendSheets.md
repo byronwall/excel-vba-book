@@ -1,7 +1,8 @@
+## DescendSheets.md
+
 ```vb
 Public Sub DescendSheets()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : DescendSheets
+ Procedure : DescendSheets
     ' Author    : @raymondwise
     ' Date      : 2015 08 07
     ' Purpose   : Places worksheets in descending alphabetical order.

@@ -1,12 +1,8 @@
+## MakeHyperlinks.md
+
 ```vb
 Public Sub MakeHyperlinks()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : MakeHyperlinks
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Converts a set of cells to hyperlink to their targetCell value
-    '---------------------------------------------------------------------------------------
-    '
+
     '+Changed to inputbox
     On Error GoTo errHandler
     Dim targetRange As Range

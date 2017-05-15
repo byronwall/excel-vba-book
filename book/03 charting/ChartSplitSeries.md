@@ -1,12 +1,8 @@
+## ChartSplitSeries.md
+
 ```vb
 Public Sub ChartSplitSeries()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : ChartSplitSeries
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Take all series from selected charts and puts them in their own charts
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetObject As ChartObject
     Dim targetChart As Chart
 

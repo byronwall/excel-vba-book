@@ -1,13 +1,8 @@
+## CombineAllSheetsData.md
+
 ```vb
 Public Sub CombineAllSheetsData()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : CombineAllSheetsData
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Combines all sheets, resuing columns where the same
-    ' Flag      : not-used
-    '---------------------------------------------------------------------------------------
-    '
+
     'create the new wkbk and sheet
     Dim targetWorkbook As Workbook
     Dim sourceWorkbook As Workbook

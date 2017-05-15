@@ -1,12 +1,8 @@
+## Chart_AddTitles.md
+
 ```vb
 Public Sub Chart_AddTitles()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Chart_AddTitles
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Adds all missing titles to all selected charts
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetObject As ChartObject
     Const X_AXIS_TITLE As String = "x axis"
     Const Y_AXIS_TITLE As String = "y axis"

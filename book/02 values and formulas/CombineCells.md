@@ -1,12 +1,8 @@
+## CombineCells.md
+
 ```vb
 Public Sub CombineCells()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : CombineCells
-    ' Author    : @byronwall, @RaymondWise
-    ' Date      : 2015 07 24
-    ' Purpose   : Takes a row of values and converts them to a single column
-    '---------------------------------------------------------------------------------------
-    '
+
     'collect all user data up front
     Dim inputRange As Range
     On Error GoTo errHandler

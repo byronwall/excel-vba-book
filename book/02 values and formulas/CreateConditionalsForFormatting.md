@@ -1,12 +1,8 @@
+## CreateConditionalsForFormatting.md
+
 ```vb
 Public Sub CreateConditionalsForFormatting()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : CreateConditionalsForFormatting
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Creates a set of conditional formats for order of magnitude numbers
-    '---------------------------------------------------------------------------------------
-    '
+
     On Error GoTo errHandler
     Dim inputRange As Range
     Set inputRange = GetInputOrSelection("Select the range of cells to convert")

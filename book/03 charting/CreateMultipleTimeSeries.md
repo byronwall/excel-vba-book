@@ -1,12 +1,8 @@
+## CreateMultipleTimeSeries.md
+
 ```vb
 Public Sub CreateMultipleTimeSeries()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : CreateMultipleTimeSeries
-    ' Author    : @byronwall
-    ' Date      : 2015 08 11
-    ' Purpose   : Entry point from Ribbon to create a set of time series charts
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim rangeOfDates As Range
     Dim dataRange As Range
     Dim rangeOfTitles As Range

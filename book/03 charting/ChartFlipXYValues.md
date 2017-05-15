@@ -1,12 +1,8 @@
+## ChartFlipXYValues.md
+
 ```vb
 Public Sub ChartFlipXYValues()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : ChartFlipXYValues
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Flips the x/y ranges for each series
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetObject As ChartObject
     Dim targetChart As Chart
     For Each targetObject In Chart_GetObjectsFromObject(Selection)

@@ -1,13 +1,8 @@
+## PivotSetAllFields.md
+
 ```vb
 Public Sub PivotSetAllFields()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : PivotSetAllFields
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Sets all fields in a PivotTable to use a certain calculation type
-    ' Flag      : new-feature
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetTable As PivotTable
     Dim targetSheet As Worksheet
 

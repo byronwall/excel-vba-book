@@ -1,12 +1,8 @@
+## CategoricalColoring.md
+
 ```vb
 Public Sub CategoricalColoring()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : CategoricalColoring
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Applies the formatting from one range to another if targetCell value's match
-    '---------------------------------------------------------------------------------------
-    '
+
 
     '+Get User Input
     Dim targetRange As Range

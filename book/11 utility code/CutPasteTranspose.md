@@ -1,12 +1,8 @@
+## CutPasteTranspose.md
+
 ```vb
 Public Sub CutPasteTranspose()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : CutPasteTranspose
-    ' Author    : @byronwall, @RaymondWise
-    ' Date      : 2015 07 31
-    ' Purpose   : Does a cut/transpose by cutting each cell individually
-    '---------------------------------------------------------------------------------------
-    '
+
 
     '########Still Needs to address Issue#23#############
     On Error GoTo errHandler

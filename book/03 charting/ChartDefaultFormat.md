@@ -1,12 +1,8 @@
+## ChartDefaultFormat.md
+
 ```vb
 Public Sub ChartDefaultFormat()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : ChartDefaultFormat
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Set the default format for all charts on ActiveSheet
-    '---------------------------------------------------------------------------------------
-    '
+
     Const MARKER_SIZE As Long = 3
     Dim majorGridlineColor As Long
     majorGridlineColor = RGB(242, 242, 242)

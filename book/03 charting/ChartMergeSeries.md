@@ -1,12 +1,8 @@
+## ChartMergeSeries.md
+
 ```vb
 Public Sub ChartMergeSeries()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : ChartMergeSeries
-    ' Author    : @byronwall
-    ' Date      : 2015 12 30
-    ' Purpose   : Merges all selected charts into a single chart
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetObject As ChartObject
     Dim targetChart As Chart
     Dim firstChart As Chart

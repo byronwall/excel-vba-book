@@ -1,13 +1,8 @@
+## CopyTranspose.md
+
 ```vb
 Public Sub CopyTranspose()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : CopyTranspose
-    ' Author    : @byronwall, @RaymondWise
-    ' Date      : 2015 07 31
-    ' Purpose   : Takes a range of cells and does a copy/tranpose
-    ' Flag      : new-feature
-    '---------------------------------------------------------------------------------------
-    '
+
     'If user cancels a range input, we need to handle it when it occurs
     On Error GoTo errCancel
     Dim selectedRange As Range

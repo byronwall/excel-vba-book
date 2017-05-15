@@ -1,11 +1,8 @@
+## AscendSheets.md
+
 ```vb
 Public Sub AscendSheets()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : AscendSheets
-    ' Author    : @raymondwise
-    ' Date      : 2015 08 07
-    ' Purpose   : Places worksheets in ascending alphabetical order.
-    '---------------------------------------------------------------------------------------
+
     Application.ScreenUpdating = False
     Dim targetWorkbook As Workbook
     Set targetWorkbook = ActiveWorkbook

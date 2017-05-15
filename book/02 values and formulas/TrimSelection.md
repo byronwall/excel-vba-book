@@ -1,12 +1,8 @@
+## TrimSelection.md
+
 ```vb
 Public Sub TrimSelection()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : TrimSelection
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Trims whitespace from a targetCell's value
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim rangeToTrim As Range
     On Error GoTo errHandler
     Set rangeToTrim = GetInputOrSelection("Select the formulas you'd like to convert to static values")

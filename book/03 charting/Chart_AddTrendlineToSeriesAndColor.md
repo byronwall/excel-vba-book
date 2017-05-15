@@ -1,12 +1,8 @@
+## Chart_AddTrendlineToSeriesAndColor.md
+
 ```vb
 Public Sub Chart_AddTrendlineToSeriesAndColor()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Chart_AddTrendlineToSeriesAndColor
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Adds a trendline to each series in all charts
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetObject As ChartObject
 
     For Each targetObject In Chart_GetObjectsFromObject(Selection)

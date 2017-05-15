@@ -1,12 +1,8 @@
+## UpdateFromChartSeries.md
+
 ```vb
 Public Sub UpdateFromChartSeries(targetSeries As series)
-    '---------------------------------------------------------------------------------------
-    ' Procedure : UpdateFromChartSeries
-    ' Author    : @byronwall
-    ' Date      : 2015 11 09
-    ' Purpose   : Reads the series info from a Series and stores it in the class
-    '---------------------------------------------------------------------------------------
-    '
+
     
     'this will work for the simple case where all items are references
     Const FIND_STRING As String = "SERIES("

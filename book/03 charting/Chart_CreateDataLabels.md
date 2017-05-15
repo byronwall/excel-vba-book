@@ -1,13 +1,8 @@
+## Chart_CreateDataLabels.md
+
 ```vb
 Public Sub Chart_CreateDataLabels()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Chart_CreateDataLabels
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Adds a data label for each series in the chart
-    ' Flag      : new-feature
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetObject As ChartObject
     On Error GoTo Chart_CreateDataLabels_Error
 

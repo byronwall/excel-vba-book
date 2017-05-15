@@ -1,13 +1,8 @@
+## RemoveZeroValueDataLabel.md
+
 ```vb
 Public Sub RemoveZeroValueDataLabel()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : RemoveZeroValueDataLabel
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Code deletes data labels that have 0 value
-    ' Flag      : not-used
-    '---------------------------------------------------------------------------------------
-    '
+
     'uses the ActiveChart, be sure a chart is selected
     Dim targetChart As Chart
     Set targetChart = ActiveChart

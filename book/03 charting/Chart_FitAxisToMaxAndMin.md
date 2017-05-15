@@ -1,12 +1,8 @@
+## Chart_FitAxisToMaxAndMin.md
+
 ```vb
 Public Sub Chart_FitAxisToMaxAndMin(ByVal axisType As XlAxisType)
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Chart_FitAxisToMaxAndMin
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Iterates through all series and sets desired axis to max/min of data
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetObject As ChartObject
     For Each targetObject In Chart_GetObjectsFromObject(Selection)
         '2015 11 09 moved first inside loop so that it works for multiple charts

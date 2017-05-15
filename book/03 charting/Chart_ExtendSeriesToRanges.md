@@ -1,12 +1,8 @@
+## Chart_ExtendSeriesToRanges.md
+
 ```vb
 Public Sub Chart_ExtendSeriesToRanges()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Chart_ExtendSeriesToRanges
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Extends the underlying data for a series to go to the end of its current Range
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetObject As ChartObject
 
     For Each targetObject In Chart_GetObjectsFromObject(Selection)

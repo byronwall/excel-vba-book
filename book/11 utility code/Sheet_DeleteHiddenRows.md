@@ -1,3 +1,5 @@
+## Sheet_DeleteHiddenRows.md
+
 ```vb
 Public Sub Sheet_DeleteHiddenRows()
     'These rows are unrecoverable

@@ -1,13 +1,8 @@
+## GenerateRandomData.md
+
 ```vb
 Public Sub GenerateRandomData()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : GenerateRandomData
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Generates a block of random data for testing questions on SO
-    ' Description: Will create a data table of 4 columns and fill the first column with dates and the others with integers
-    '---------------------------------------------------------------------------------------
-    '
+
     Const NUMBER_OF_ROWS As Long = 10
     Const NUMBER_OF_COLUMNS As Long = 3 '0 index
     Const DEFAULT_COLUMN_WIDTH As Long = 15

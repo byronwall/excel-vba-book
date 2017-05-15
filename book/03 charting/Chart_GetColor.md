@@ -1,12 +1,8 @@
+## Chart_GetColor.md
+
 ```vb
 Public Function Chart_GetColor(ByVal index As Variant) As Long
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Chart_GetColor
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Returns a list of colors for styling chart series
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim colors(1 To 10) As Variant
 
     colors(1) = RGB(31, 120, 180)

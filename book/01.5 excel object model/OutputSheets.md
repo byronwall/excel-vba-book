@@ -1,12 +1,8 @@
+## OutputSheets.md
+
 ```vb
 Public Sub OutputSheets()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : OutputSheets
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Creates a new worksheet with a list and link to each sheet
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim outputSheet As Worksheet
     Set outputSheet = Worksheets.Add(Before:=Worksheets(1))
     outputSheet.Activate

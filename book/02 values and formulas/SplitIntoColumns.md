@@ -1,12 +1,8 @@
+## SplitIntoColumns.md
+
 ```vb
 Public Sub SplitIntoColumns()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : SplitIntoColumns
-    ' Author    : @byronwall, @RaymondWise
-    ' Date      : 2015 07 24
-    ' Purpose   : Splits a targetCell into columns next to it based on a delimeter
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim inputRange As Range
 
     Set inputRange = GetInputOrSelection("Select the range of cells to split")

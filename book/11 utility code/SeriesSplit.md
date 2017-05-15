@@ -1,12 +1,8 @@
+## SeriesSplit.md
+
 ```vb
 Public Sub SeriesSplit()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : SeriesSplit
-    ' Author    : @byronwall
-    ' Date      : 2015 08 11
-    ' Purpose   : Takes a category columns and splits the values out into new columns for each unique entry
-    '---------------------------------------------------------------------------------------
-    '
+
     On Error GoTo ErrorNoSelection
 
     Dim selectedRange As Range

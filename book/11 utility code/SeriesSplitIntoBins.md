@@ -1,12 +1,8 @@
+## SeriesSplitIntoBins.md
+
 ```vb
 Public Sub SeriesSplitIntoBins()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : SeriesSplitIntoBins
-    ' Author    : @byronwall
-    ' Date      : 2015 11 03
-    ' Purpose   : Code will break a column of continuous data into bins for plotting
-    '---------------------------------------------------------------------------------------
-    '
+
     Const LESS_THAN_EQUAL_TO_GENERAL As String = "<= General"
     Const GREATER_THAN_GENERAL As String = "> General"
     On Error GoTo ErrorNoSelection

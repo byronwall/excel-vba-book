@@ -1,13 +1,8 @@
+## ColorForUnique.md
+
 ```vb
 Public Sub ColorForUnique()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : ColorForUnique
-    ' Author    : @byronwall, @RaymondWise
-    ' Date      : 2015 07 29
-    ' Purpose   : Adds the same unique color to each unique value in a range
-    ' Flag      : not-used
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim dictKeysAndColors As New Scripting.Dictionary
     Dim dictColorsOnly As New Scripting.Dictionary
     

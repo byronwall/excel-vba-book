@@ -1,13 +1,8 @@
+## ConvertSelectionToCsv.md
+
 ```vb
 Public Sub ConvertSelectionToCsv()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : ConvertSelectionToCsv
-    ' Author    : @byronwall
-    ' Date      : 2015 08 11
-    ' Purpose   : Crude CSV output from the current selection, works with numbers
-    ' Flag      : new-feature
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim sourceRange As Range
     Set sourceRange = GetInputOrSelection("Choose range for converting to CSV")
 

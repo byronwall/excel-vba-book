@@ -1,12 +1,8 @@
+## Chart_Axis_AutoX.md
+
 ```vb
 Public Sub Chart_Axis_AutoX()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : Chart_Axis_AutoX
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Reverts the x axis of a chart back to Auto
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetObject As ChartObject
     For Each targetObject In Chart_GetObjectsFromObject(Selection)
         Dim targetChart As Chart

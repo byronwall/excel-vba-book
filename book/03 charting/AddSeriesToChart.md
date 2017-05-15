@@ -1,12 +1,8 @@
+## AddSeriesToChart.md
+
 ```vb
 Public Function AddSeriesToChart(ByVal targetChart As Chart) As series
-    '---------------------------------------------------------------------------------------
-    ' Procedure : AddSeriesToChart
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Adds the represented series to a chart
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetSeries As series
     Set targetSeries = targetChart.SeriesCollection.NewSeries
     

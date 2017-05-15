@@ -1,12 +1,8 @@
+## FillValueDown.md
+
 ```vb
 Public Sub FillValueDown()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : FillValueDown
-    ' Author    : @byronwall
-    ' Date      : 2015 08 11
-    ' Purpose   : Does a fill of blank values from the cell above with a value
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim inputRange As Range
     Set inputRange = GetInputOrSelection("Select range for waterfall")
 

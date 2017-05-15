@@ -1,12 +1,8 @@
+## ConvertToNumber.md
+
 ```vb
 Public Sub ConvertToNumber()
-    '---------------------------------------------------------------------------------------
-    ' Procedure : ConvertToNumber
-    ' Author    : @byronwall
-    ' Date      : 2015 07 24
-    ' Purpose   : Forces all numbers stored as text to be converted to actual numbers
-    '---------------------------------------------------------------------------------------
-    '
+
     Dim targetCell As Range
     Dim targetSelection As Range
 
