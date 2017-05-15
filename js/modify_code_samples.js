@@ -34,7 +34,9 @@ files.every(function (element) {
             var codePath = path.join(folderPath, codeFile);
             var contents = cleanUpCodeFile(codePath);
 
-            fs.writeFileSync(codePath, contents);
+            if (contents !== null) {
+                fs.writeFileSync(codePath, contents);
+            }
 
             console.log(contents);
 
@@ -52,11 +54,15 @@ function cleanUpCodeFile(codeFile) {
 
     var codeFileContents = fs.readFileSync(codeFile, "utf8");
 
+    if (codeFileContents.indexOf("##") === 0) {
+        return null;
+    }
+
     console.log(codeFileContents);
 
     //add the header line to the top using filename
     var outContents = codeFileContents;
-    outContents = "## " + path.basename(codeFile) + "\n\n"  + outContents;
+    outContents = "## " + path.basename(codeFile) + "\n\n" + outContents;
 
     //remove the comments section
 
@@ -65,6 +71,7 @@ function cleanUpCodeFile(codeFile) {
     var commentRemovalRegex = /^\s+'-{3,}[\s\S]*?-{3,}$\s+'/gm;
 
     outContents = outContents.replace(commentRemovalRegex, "");
+
 
     return outContents;
 }
