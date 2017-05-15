@@ -56,7 +56,7 @@ function cleanUpCodeFile(codeFile) {
 
     //add the header line to the top using filename
     var outContents = codeFileContents;
-    outContents = "# code sample from " + codeFile + "\n\n"  + outContents;
+    outContents = "## code sample from " + codeFile + "\n\n"  + outContents;
 
     //remove the comments section
 
