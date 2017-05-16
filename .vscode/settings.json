@@ -1,0 +1,13 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "markdownlint.config": {
+        "default": true,
+        "MD002": false,
+        "MD041": false,
+        "MD007": {
+            "indent": 4
+        }
+    },
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+}

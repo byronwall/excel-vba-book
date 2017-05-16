@@ -1,0 +1,15 @@
+## introduction to selections
+
+Identifying and using a `Range` object in VBA is the most critical aspect of building usable macros and helpful code. This point can be missed since you always have access to `ActiveCell` or `Selection`, but you will quickly reach the limits of VBA if you only use those functions.
+
+This chapter will focus on the myriad ways to access a `Range`.  A `Range` represents any (and every) cell in a `Worksheet`.  The power of the `Range` is that it can represent a single cell, a row, a column, all cells, or a discontinuous collection of any combination of those options.  From the `Range` you can then have access to the core functions of Excel/VBA.
+
+The motivation for finding a `Range` is simple: the cell is the core entity of a spreadsheet, and presumably you're using the spreadsheet for some reason.  You can technically write VBA code that executes without ever touching the underlying spreadsheet -- and this can be useful at times -- but more likely, you are using Excel and VBA because your data or use case is in Excel.  If you want to access and work with the data in an existing spreadsheet, you will do so using a `Range`.  If you want to put new data into a spreadsheet, you will use a `Range` to do that.  If you want to use the more advanced features of Excel (e.g. Charting, PivotTables, etc.) you will use a `Range` to tell Excel how to drive those features.
+
+Simply put, you will not be writing useful and maintainable VBA code unless you've got a strong command of working with the `Range`.  To that end, this chapter will describe the ways to get a `Range`.
+
+When thinking of the `Range`, you should think in terms of strategies for navigating `Ranges` and the actual code to execute those strategies.  In some cases, the strategy is as simple as using the right command, but, often, you are required to think a step or two in advance about how to get the `Range` you want based on the nature of the spreadsheet and the actual task to be completed.  For example, you will handle a block of data that is largely blank cells (sparse) different than a fat chunk of data with no missing values (dense).  For the latter, you can quickly navigate the block of data with `Range.End`; not true for the former.
+
+When thinking of the different strategies, the major split is whether you are starting with a blank `Worksheet` or if you are working with data in an existing `Worksheet`.  If the `Worksheet` is blank, the main task is managing the `Ranges` that you are creating to place data on the sheet.  If the `Worksheet` is contains data that needs to be processed, the goal is to identify the parts of the data you need and understand their relationship to other parts of the `Worksheet`.  Often, you will be combining both of these workflow (i.e. process data into a new form) and will require both ways of thinking, possibly interleaved throughout the same code.
+
+When the term `Selection` is used here, it refers generically to getting a `Range` reference.  That `Range` could actually be `Select`ed, but the goal is generally to avoid selecting cells.  Instead, the refernece is used directly to do some processing.
