@@ -6,7 +6,6 @@ When working with data in an existing `Worksheet`, the main goal is to find the 
 * Use the ActiveCell -- `ActiveCell` (see later for why these are different)
 * Hard-code the address of a single cell -- `Range("A1")` or `Cells(1,1)` (please don't use the latter)
 * Name a cell and use that name directly -- `Range("CellName")`
-* Name a cell and use that name indirectly -- `Names("CellName")`
 * Iterate through all cells -- `Cells`, `UsedRange`
 * While iterating through cells, use some logic to identify if a `Range` is the one you want:
       * Check the `Value` of the cell
@@ -21,6 +20,7 @@ When working with data in an existing `Worksheet`, the main goal is to find the 
 * Identify several `Ranges` and combine them -- `Union()`
 * Identify several `Ranges` and use only the common cells -- `Intersect()`
 * Pull the `Range` reference from some other object
+* Name a cell and use that name indirectly -- `Names("CellName")`
 * Ask the user to select the `Range` to use
 * Use a function to get a reference -- `Application.Index`
 * Search for the cell based on its function or value -- `Find()`
@@ -31,5 +31,4 @@ In addition to those "simple" techniques above, there are more advanced techniqu
 * Use the Offset-Intersect technique to get a block of data without its header
 * Use the `AutoFilter` to filter a dataset and then get the visible cells with `SpecialCells()`
 * Use one of the techniques above to get a `Range` on one `Worksheet`; grab the corresponding `Range` on a another `Worksheet` to do some processing
- 
  

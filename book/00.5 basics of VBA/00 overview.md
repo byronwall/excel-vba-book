@@ -26,3 +26,6 @@ later on, there should be an advanced VBA section to handle:
 * adding references to other objects (specifically Office and Microsoft Runtime)
 
 The pitfalls of running macros and how they destroy the undo functionality.
+
+* using the debugger
+* using the Immediate window
