@@ -57,7 +57,8 @@
       "childTasks": [
         16,
         40,
-        42
+        42,
+        44
       ],
       "sortOrder": 9007199254740991,
       "status": null,
@@ -435,6 +436,24 @@
       "parentTask": 6,
       "childTasks": [],
       "sortOrder": 2,
+      "status": null,
+      "milestone": null,
+      "isComplete": false,
+      "isProjectRoot": false,
+      "tags": []
+    },
+    {
+      "ID": 44,
+      "description": "Some comments on notation `Range()` vs. `Range`",
+      "comments": "",
+      "priority": "",
+      "duration": 0,
+      "startDate": null,
+      "endDate": null,
+      "dateAdded": "5/17/2017, 8:35:25 PM",
+      "parentTask": 6,
+      "childTasks": [],
+      "sortOrder": 3,
       "status": null,
       "milestone": null,
       "isComplete": false,

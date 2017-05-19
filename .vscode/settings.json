@@ -9,5 +9,14 @@
         }
     },
     "editor.tabSize": 4,
-    "editor.insertSpaces": true
+    "editor.insertSpaces": true,
+    "todohighlight.include": "**/*.md",
+    "todohighlight.keywords": [
+
+        {
+            "text": "TODO:",
+            "color": "white",
+            "backgroundColor": "darkkhaki"
+        }
+    ]
 }

@@ -20,4 +20,4 @@ This could focus on:
 * Going through a workflow that involves using other office products
 * Strategy for identifying cells using Styles and working through them; effectively a tag feature
 
-The long list of sections here says that maybe there is enough code to put together a couple of "case study" type things that break down the development of an entire workflow.  This could be something from TDA related to charting/processing or some other thing.
+The long list of sections here says that maybe there is enough code to put together a couple of "case study" type things that break down the development of an entire workflow.  This could related to charting/processing or some other thing.
