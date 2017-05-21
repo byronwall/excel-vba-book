@@ -19,7 +19,7 @@
         30,
         38
       ],
-      "sortOrder": 9007199254740991,
+      "sortOrder": 0,
       "status": null,
       "milestone": null,
       "isComplete": false,
@@ -69,7 +69,7 @@
         61,
         63
       ],
-      "sortOrder": 9007199254740991,
+      "sortOrder": 1,
       "status": null,
       "milestone": null,
       "isComplete": false,
@@ -164,7 +164,7 @@
       "childTasks": [
         21
       ],
-      "sortOrder": 9007199254740991,
+      "sortOrder": 2,
       "status": null,
       "milestone": null,
       "isComplete": false,
@@ -645,6 +645,44 @@
       "parentTask": 6,
       "childTasks": [],
       "sortOrder": 12,
+      "status": null,
+      "milestone": null,
+      "isComplete": false,
+      "isProjectRoot": false,
+      "tags": []
+    },
+    {
+      "ID": 66,
+      "description": "03 - Charting",
+      "comments": "",
+      "priority": "",
+      "duration": 0,
+      "startDate": null,
+      "endDate": null,
+      "dateAdded": "5/20/2017, 7:22:36 PM",
+      "parentTask": null,
+      "childTasks": [
+        67
+      ],
+      "sortOrder": 3,
+      "status": null,
+      "milestone": null,
+      "isComplete": false,
+      "isProjectRoot": true,
+      "tags": []
+    },
+    {
+      "ID": 67,
+      "description": "Break out the chapters for the common things to include more code samples",
+      "comments": "",
+      "priority": "",
+      "duration": 0,
+      "startDate": null,
+      "endDate": null,
+      "dateAdded": "5/20/2017, 7:22:40 PM",
+      "parentTask": 66,
+      "childTasks": [],
+      "sortOrder": 0,
       "status": null,
       "milestone": null,
       "isComplete": false,

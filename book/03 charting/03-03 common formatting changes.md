@@ -169,3 +169,48 @@ Once you have an Axis object, you can set to work changing the common properties
     * Ticks (TODO: that right?)
     * HasTitle and AxisTitle
 
+### common properties of the Legend
+
+The Legend is a simple affair compared to the others.  There really only two things to do with it: remove it or move it.  Both of these are simple enough:
+
+* HasLegend (on the Chart)
+* Delete
+* Position
+
+TODO: add an example of these in action
+
+### common properties of a Point
+
+The Point represents the lowest level when it comes to how the data and formatting of a Chart is built.  In general, you do not have to actively go editting Points.  This is because you will typically edit the appearance of the Series and the Axes to get the Chart that you want.  Tehre are however times when you get down to the metal and edit the proeprties of the invidual points.  Before describing how to do this, it may help to give an example or two for why you want to get down to this level:
+
+* Delete a data point without touching the Series
+* Add a DataLabel to the point if the vlaue is below smoe threshold (or if some other Range has a value)
+* Hide a Point from one series because you want it to show up in anotehr one
+
+Of the tasks above, only one of them (the second) has to be accomplished via the Points.  The others _could_ be done via a different method, but you might find yourself in a spot where iterating some Ppints will save a ton of headache elsewhere.  A cautionary note is that typically you shoudl not be editing the properties of a Point; there is nearly always a better way to do these things.  Part of the prblem is that the settings you change will be quickly overwritten by changes in Excel or VBA.  If you know you just need smoethign done however, Points can be a quick way to make it happen.
+
+TODO: look into ErrorBars here?
+
+WHen thinking about working thruogh the Points of a Series, consider the common properties you can change:
+
+* HasLabel / DataLabel
+* Value
+* Formatting? (TODO: waht are these)
+* Hidden
+
+TODO: finish this list
+
+Note that in addition to the common properties, you can also change anything that can be changed from teh normal Excel settings/properties widnow.
+
+### common properties of the TrendLine
+
+The TrendLine is one of the lesser used properties, but it can be a real time saver when using VBA if you need to.  The problem with the trendline normally is that you are required to work through a ton of menus to configure the properties.  This is even more painful when you've got to do the same thing to multiple Series in a Chart or across multiple Charts.  Similar to the other objects here, you can use VBA to quickly do the task that is otherwise a pain.
+
+The most likely properties you'll use:
+
+* Creating one off of a series
+* Type
+* Parameter
+
+TODO: confirm these are correct
+TODO: add an example showing how to add a Trendline for every Series
