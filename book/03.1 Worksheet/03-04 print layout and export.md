@@ -1,3 +1,19 @@
+## print layout and exporting
+
+THis section will focus on the print and export related details of a Worksheet.  In particular, it will focus on the details that are typically accessed through the Page Layout menu.  This is one fo the unique asepcts of Worksheets becuase they are the holder of the print/export infomraiton.  The main detials related to this are:
+
+* Print area
+* Page layout -- this is a very large object with a lot of properties to be set
+* Exporting and printing
+
+The details in this section can be a real time saver because one of the more tedious asepcts of workign with Excel is ensuring that your reports/graphs/data will print or export correctly.  Being able to control these properties with VBA mkaes it possible to quickly apply the smae formatting to a large number of Worksheets without having to click nine million times.
+
+TODO: add the content related to page layout
+
+### Rand_common print settings
+
+TODO: clean up this code
+
 ```vb
 Sub Rand_CommonPrintSettings()
 
