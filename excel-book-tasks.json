@@ -165,7 +165,8 @@
       "dateAdded": "5/14/2017, 8:01:32 PM",
       "parentTask": null,
       "childTasks": [
-        21
+        21,
+        74
       ],
       "sortOrder": 2,
       "status": null,
@@ -740,6 +741,24 @@
       "parentTask": 2,
       "childTasks": [],
       "sortOrder": 7,
+      "status": null,
+      "milestone": null,
+      "isComplete": false,
+      "isProjectRoot": false,
+      "tags": []
+    },
+    {
+      "ID": 74,
+      "description": "Rename this section to refer to Ranges instead of selections",
+      "comments": "",
+      "priority": "",
+      "duration": 0,
+      "startDate": null,
+      "endDate": null,
+      "dateAdded": "5/28/2017, 9:18:18 PM",
+      "parentTask": 20,
+      "childTasks": [],
+      "sortOrder": 1,
       "status": null,
       "milestone": null,
       "isComplete": false,
