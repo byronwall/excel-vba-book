@@ -1,4 +1,4 @@
-# overview of 0.2 basics of Excel
+## comments on knowing Excel before starting VBA
 
 The Basics of Excel chapter may not actually be needed.  The problem with working through VBA is that it requires a baseline understanding of how to use Excel.  In general, it requires more than a baseline understanding of how to use Excel -- it requires an advanced understanding of how Excel works.   In particular, it's important to know what happens by default when you do something in Excel.  This then makes it much easier to reason through how the VBA is going to function.
 

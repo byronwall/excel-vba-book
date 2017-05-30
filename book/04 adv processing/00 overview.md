@@ -21,3 +21,5 @@ This could focus on:
 * Strategy for identifying cells using Styles and working through them; effectively a tag feature
 
 The long list of sections here says that maybe there is enough code to put together a couple of "case study" type things that break down the development of an entire workflow.  This could related to charting/processing or some other thing.
+
+TODO: consider going through StackOverflow answers to see what the most common slightly advanced topics are that come up

@@ -764,6 +764,44 @@
       "isComplete": false,
       "isProjectRoot": false,
       "tags": []
+    },
+    {
+      "ID": 76,
+      "description": "02 - values",
+      "comments": "",
+      "priority": "",
+      "duration": 0,
+      "startDate": null,
+      "endDate": null,
+      "dateAdded": "5/29/2017, 7:27:51 PM",
+      "parentTask": null,
+      "childTasks": [
+        77
+      ],
+      "sortOrder": 9007199254740991,
+      "status": null,
+      "milestone": null,
+      "isComplete": false,
+      "isProjectRoot": true,
+      "tags": []
+    },
+    {
+      "ID": 77,
+      "description": "Consider combining this with the Range chapter",
+      "comments": "Make the split between accessing a Range and using a Range",
+      "priority": "",
+      "duration": 0,
+      "startDate": null,
+      "endDate": null,
+      "dateAdded": "5/29/2017, 7:27:55 PM",
+      "parentTask": 76,
+      "childTasks": [],
+      "sortOrder": 0,
+      "status": null,
+      "milestone": null,
+      "isComplete": false,
+      "isProjectRoot": false,
+      "tags": []
     }
   ]
 }
