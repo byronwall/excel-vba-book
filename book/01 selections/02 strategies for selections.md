@@ -29,6 +29,5 @@ When working with data in an existing `Worksheet`, the main goal is to find the 
 In addition to those "simple" techniques above, there are more advanced techniques available.  Those advanced techniques all rely on some combination of the above options, along with additional logic to manipulate the `Worksheet`.  A couple of combination techniques would include:
 
 * Use the Offset-Intersect technique to get a block of data without its header
-* Use the `AutoFilter` to filter a dataset and then get the visible cells with `SpecialCells()`
+* Use the `AutoFilter` to filter a data set and then get the visible cells with `SpecialCells()`
 * Use one of the techniques above to get a `Range` on one `Worksheet`; grab the corresponding `Range` on a another `Worksheet` to do some processing
- 

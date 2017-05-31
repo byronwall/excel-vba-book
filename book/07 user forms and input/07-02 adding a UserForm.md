@@ -1,4 +1,4 @@
-## creatnig a UserForm
+## creating a UserForm
 
 TODO: add instructions here
 
@@ -6,5 +6,4 @@ TODO: add pictures of the steps
 
 ## making that USerForm show up
 
-TODO: add htis ocntnet adn decide if this should be split out
-
+TODO: add this content and decide if this should be split out

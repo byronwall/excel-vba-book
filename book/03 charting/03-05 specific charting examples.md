@@ -1,6 +1,6 @@
 ## specific charting examples
 
-This section will focus on some specific applications of applying VBA to charts.  The code here can be quickly repurposed for your own application.  These examples include:
+This section will focus on some specific applications of applying VBA to charts.  The code here can be quickly reused for your own application.  These examples include:
 
 * Creating a grid of XY scatter plots (a scatter matrix) based on a block of data
 * Creating a panel of time series, one chart per each value with a common x-axis
@@ -23,7 +23,7 @@ Public Sub ChartCreateXYGrid()
     majorGridlineColor = RGB(200, 200, 200)
     Dim minorGridlineColor As Long
     minorGridlineColor = RGB(220, 220, 220)
-    
+
     Const CHART_HEIGHT As Long = 300
     Const CHART_WIDTH As Long = 400
     Const MARKER_SIZE As Long = 3
@@ -166,7 +166,7 @@ Public Sub ChartDefaultFormat()
     majorGridlineColor = RGB(242, 242, 242)
     Const TITLE_FONT_SIZE As Long = 12
     Const SERIES_LINE_WEIGHT As Single = 1.5
-    
+
     Dim targetObject As ChartObject
 
     For Each targetObject In Chart_GetObjectsFromObject(Selection)
@@ -196,9 +196,9 @@ Public Sub ChartDefaultFormat()
 
         targetAxis.MajorGridlines.Border.Color = majorGridlineColor
         targetAxis.Crosses = xlAxisCrossesMinimum
-        
+
         Set targetAxis = targetChart.Axes(xlCategory)
-        
+
         targetAxis.HasMajorGridlines = True
 
         targetAxis.MajorGridlines.Border.Color = majorGridlineColor

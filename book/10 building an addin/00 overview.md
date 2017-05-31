@@ -1,6 +1,6 @@
 # overview of 10 building an addin
 
-The addin chapter can be a real differentiator.  Making an addin is a great way to bring together a large number of related features that would be a pain to keep together anyways.
+The addin chapter can be a real difference maker.  Making an addin is a great way to bring together a large number of related features that would be a pain to keep together anyways.
 
 Some topics to hit:
 

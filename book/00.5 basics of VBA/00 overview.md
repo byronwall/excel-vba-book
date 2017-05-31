@@ -17,7 +17,7 @@ section on VBA topics should include:
 
 most of this section is going to be boilerplate explanation of these things
 
-consider how to improve on that to avoid saying the same stuff as everyon else (or just power through it to get it on paper)
+consider how to improve on that to avoid saying the same stuff as everyone else (or just power through it to get it on paper)
 
 later on, there should be an advanced VBA section to handle:
 

@@ -1,10 +1,10 @@
 ## creating and managing Worksheets
 
-This section will focus on how to create a Worksheet and get a reference to new Worksheets.  In addiiton to that, it will discuss managing Worksheets, inclduign rearranging and deleting them.
+This section will focus on how to create a Worksheet and get a reference to new Worksheets.  In addition to that, it will discuss managing Worksheets, including rearranging and deleting them.
 
 ### creating a Worksheet
 
-TODO: add this content, focus on how to get a refernece to the newly created sheet, also focus on how to control where the new sheet is place
+TODO: add this content, focus on how to get a reference to the newly created sheet, also focus on how to control where the new sheet is place
 
 TODO: also include a section about how to Copy an existing Worksheet
 
@@ -14,7 +14,7 @@ TODO: add this content about removing a Worksheet, focus on disabling the alerts
 
 ### rearranging Worksheets
 
-TODO: add content about how to reoder the Worksheets
+TODO: add content about how to reorder the Worksheets
 
 #### AscendSheets.md
 

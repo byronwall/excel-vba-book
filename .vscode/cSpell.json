@@ -7,7 +7,23 @@
     // words - list of words to be always considered correct
     "words": [
         "addin",
-        "Intellisense"
+        "Intellisense",
+        "VLOOKUP",
+        "scrollbars",
+        "Gridlines",
+        "Trendline",
+        "gridline",
+        "Trendlines",
+        "butl",
+        "Stdev",
+        "Devs",
+        "xlam",
+        "Unprotect",
+        "UDFs",
+        "addins",
+        "Excel's",
+        "toolbars",
+        "XLSM"
     ],
     // flagWords - list of words to be always considered incorrect
     // This is useful for offensive words and common spelling errors.

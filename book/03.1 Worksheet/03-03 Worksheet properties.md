@@ -19,7 +19,7 @@ Public Sub LockAllSheets()
     Else
         Application.ScreenUpdating = False
 
-        'Changed to activeworkbook so if add-in is not installed, it will target the active book rather than the xlam
+        'Changed to ActiveWorkbook so if add-in is not installed, it will target the active book rather than the xlam
         Dim targetSheet As Worksheet
         For Each targetSheet In ActiveWorkbook.Sheets
             On Error Resume Next
@@ -75,15 +75,15 @@ Public Sub UnlockAllSheets()
 
     Dim userPassword As Variant
     userPassword = Application.InputBox("Password to unlock")
-    
+
     Dim errorCount As Long
     errorCount = 0
-    
+
     If Not userPassword Then
         MsgBox "Cancelled."
     Else
         Application.ScreenUpdating = False
-        'Changed to activeworkbook so if add-in is not installed, it will target the active book rather than the xlam
+        'Changed to ActiveWorkbook so if add-in is not installed, it will target the active book rather than the xlam
         Dim targetSheet As Worksheet
         For Each targetSheet In ActiveWorkbook.Sheets
             'Let's keep track of the errors to inform the user

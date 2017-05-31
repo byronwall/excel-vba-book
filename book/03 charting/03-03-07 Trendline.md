@@ -21,7 +21,7 @@ Public Sub Chart_AddTrendlineToSeriesAndColor()
     For Each targetObject In Chart_GetObjectsFromObject(Selection)
         Dim chartIndex As Long
         chartIndex = 1
-        
+
         Dim targetSeries As series
         For Each targetSeries In targetObject.Chart.SeriesCollection
 
@@ -40,7 +40,7 @@ Public Sub Chart_AddTrendlineToSeriesAndColor()
             Set newTrendline = targetSeries.Trendlines.Add()
             newTrendline.Type = xlLinear
             newTrendline.Border.Color = targetSeries.MarkerBackgroundColor
-            
+
             '2015 11 06 test to avoid error without name
             '2015 12 07 dealing with multi-cell Names
             'TODO: handle if the name is not a range also
