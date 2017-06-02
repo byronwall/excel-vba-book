@@ -50,6 +50,32 @@ There are a few common patterns when working with `End()`:
 * If you know your data has blanks, you can use `End()` to jump to the next non-blank cell.
       * This is helpful if you are trying to fill in blank cells (TODO: add the Waterfall fill here)
 
+##### RangeEnd.md
+
+```vb
+Public Function RangeEnd(ByVal rangeBegin As Range, ByVal firstDirection As XlDirection, Optional ByVal secondDirection As XlDirection = -1) As Range
+
+    If secondDirection = -1 Then
+        Set RangeEnd = Range(rangeBegin, rangeBegin.End(firstDirection))
+    Else
+        Set RangeEnd = Range(rangeBegin, rangeBegin.End(firstDirection).End(secondDirection))
+    End If
+End Function
+```
+
+##### RangeEnd_Boundary.md
+
+```vb
+Public Function RangeEnd_Boundary(ByVal rangeBegin As Range, ByVal firstDirection As XlDirection, Optional ByVal secondDirection As XlDirection = -1) As Range
+
+    If secondDirection = -1 Then
+        Set RangeEnd_Boundary = Intersect(Range(rangeBegin, rangeBegin.End(firstDirection)), rangeBegin.CurrentRegion)
+    Else
+        Set RangeEnd_Boundary = Intersect(Range(rangeBegin, rangeBegin.End(firstDirection).End(secondDirection)), rangeBegin.CurrentRegion)
+    End If
+End Function
+```
+
 #### Take a subset of an existing `Range` -- `Cells`, `Rows`, `Columns`, `Areas`
 
 TODO: add content here
