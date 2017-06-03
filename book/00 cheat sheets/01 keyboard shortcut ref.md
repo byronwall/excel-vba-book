@@ -13,6 +13,7 @@ Arrows | Offset()
 SHIFT + Arrow | Resize()
 CTRL + Arrow | End()
 CTRL + Plus (+) | Insert()
+CTRL + SHIFT + L | AutoFilter()
 **Application related** ||
 F9 | Calculate
 CTRL + ALT + F9 | CalculateFull -or- CalculateFullRebuild
