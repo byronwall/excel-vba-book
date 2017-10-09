@@ -1,3 +1,3 @@
-## adding controls to a UserForm adn wiring them up
+## adding controls to a UserForm and wiring them up
 
 TODO: add this content

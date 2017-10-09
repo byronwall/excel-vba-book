@@ -1,6 +1,6 @@
 ## chapter 2 - 1, introduction to manipulations
 
-This chapter will focus on the actual work of using `Ranges` for some purpose.  This chapter is predicated on teh previous one which focused on obtained a `Range`.  When talking of "using" a `Range`, the goal usually takes one of the following forms:
+This chapter will focus on the actual work of using `Ranges` for some purpose.  This chapter is predicated on the previous one which focused on obtained a `Range`.  When talking of "using" a `Range`, the goal usually takes one of the following forms:
 
 * Work through a spreadsheet of data, processing it from one format into another.  This can be to pull data out, do calculations on a subset of data, change the formatting, aggregate data, summarize data into a new spreadsheet, etc.  The options here are really endless, but the main idea is that you have an existing spreadsheet of data to do something with.
 

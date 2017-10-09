@@ -1,6 +1,6 @@
 ## print layout and exporting
 
-THis section will focus on the print and export related details of a Worksheet.  In particular, it will focus on the details that are typically accessed through the Page Layout menu.  This is one fo the unique aspects of Worksheets because they are the holder of the print/export information.  The main details related to this are:
+THis section will focus on the print and export related details of a Worksheet.  In particular, it will focus on the details that are typically accessed through the Page Layout menu.  This is one of the unique aspects of Worksheets because they are the holder of the print/export information.  The main details related to this are:
 
 * Print area
 * Page layout -- this is a very large object with a lot of properties to be set

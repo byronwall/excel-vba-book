@@ -2,7 +2,7 @@
 
 TODO: add content here
 
-This technique hits on teh following:
+This technique hits on the following:
 
 * While iterating through cells, use some logic to identify if a `Range` is the one you want:
       * Check the `Value` of the cell

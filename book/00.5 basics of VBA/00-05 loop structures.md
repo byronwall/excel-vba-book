@@ -1,12 +1,12 @@
 ## loop structures
 
-The loop structures are an integral part of VBA programming.  You are pretty much guaranteed to use them immediately.  In some cases, you are more likely to use loops than logic structures.  The reason that loops are so critical is that they allow you to perform a action multiple times or across multiple objects.  Given the nature of a spreadsheet (where you have a high multitude of cells) and the reasons for using VBA (you want to perform some action multiple times) you really can't avoid loops.  Gaining an understanding and comfort will loops is critical to your skill with VBA.
+The loop structures are an integral part of VBA programming.  You are pretty much guaranteed to use them immediately.  In some cases, you are more likely to use loops than logic structures.  The reason that loops are so critical is that they allow you to perform an action multiple times or across multiple objects.  Given the nature of a spreadsheet (where you have a high multitude of cells) and the reasons for using VBA (you want to perform some action multiple times) you really can't avoid loops.  Gaining an understanding and comfort with loops is critical to your skill with VBA.
 
 There are several types of loops that work similarly but have different use cases.  Those include:
 
-* For Each loop - useful when you have a collection and want to do something for each object in that collection (this is the most common loop to use since you will nearly always have a collection of Ranges or some other object to iterate through)
-* For loop - useful when you want to do something a specific number of times
-* Do/While loops - run a loop until a condition is met which is useful when you do not know in advance how many times to run the loop and you don't have a finite collection
+* For Each - useful when you have a collection and want to do something for each object in that collection (this is the most common loop to use since you will nearly always have a collection of Ranges or some other object to iterate through)
+* For - useful when you want to do something a specific number of times
+* Do/While - run a loop until a condition is met which is useful when you do not know in advance how many times to run the loop and you don't have a finite collection
 
 It is worth noting that all loops can be written as a Do/While loop, but you will nearly never do this.  There are good reasons that the For Each and For loops exist.
 
@@ -19,6 +19,8 @@ TODO: add an example of a bad For loop
 It is not traditional to start with the For Each instead of the For loop, but I personally use the For Each far more so I'll start there.
 
 The For Each loop is used whenever you have an iterable collection.  An iterable collection can come from either the Excel object model or your own code.  In general, most of the Excel object model returns an iterable collection.  This is especially true for Ranges.
+
+TODO: add a list of iterable collections that can be used here
 
 You are not required to put the variable name in the Next line.  I recommend not including the variable unless you have tons of code in the loop and are nesting loops. Typically you will rename the variable and then get a compile time error because the variable names don't match.  I've never found the variable name in the Next line to help much.
 
@@ -46,4 +48,4 @@ If you need an index/incrementing variable alongside your loop, you are not requ
 
 If you are using a Do/While loop, you should give serious consideration to adding a counter and breaking the loop if the counter gets too large.  It happens far too often where I use a While loop and end up freezing Excel because the loop never terminates.  You can sometimes break the code and get Excel to respond, but that does not always work.  This is especially important if you are generating code that others will use since they may be less familiar with how to break out of an infinite loop.
 
-You may need to break out of a loop.  Unfortunately, VBA does not have the normal Break and Continue commands that you might be familiar with from another language.  The only way to break out of a loop on the spot is to add a label use a Goto command.  This always feels dirty to me so instead I will typically structure the loop with a Boolean that can detect whether the next iteration should continue.  This works for Continue, but it is not a good solution for getting a Break.  The only way to do this is via a Goto.  Just do it.
+You may need to break out of a loop.  Unfortunately, VBA does not have the normal Break and Continue commands that you might be familiar with from another language.  The only way to break out of a loop on the spot is to add a label use a Goto command unless you are able to break out of the Function/Sub completely using Exit.  This always feels dirty to me so instead I will typically structure the loop with a Boolean that can detect whether the next iteration should continue.  This works for Continue, but it is not a good solution for getting a Break.  The only way to do this is via a Goto.  Just do it.

@@ -1,15 +1,15 @@
 ### obtaining a reference to a Chart
 
-When working with CHarts, teh first task is typically to get a reference to an existing chart -- unless you are creating a new chart.  To obtain a reference to a chart, there are a handful of ways of doing it depending on what your spreadsheet contains and how it's structured.
+When working with CHarts, the first task is typically to get a reference to an existing chart -- unless you are creating a new chart.  To obtain a reference to a chart, there are a handful of ways of doing it depending on what your spreadsheet contains and how it's structured.
 
 THe main ways to do it are:
 
 * Use the `ActiveChart` object
 * Use the `Selection` object -- this is highly depending on what is selected
-* Use teh `ChartObjects` object
+* Use the `ChartObjects` object
     * If you know which chart you want, you can supply an index; this works great if there is only a single chart - `ChartObjects(1)`
     * If you want to do something to all charts, you can iterate this object
-    * If you have named teh chart (more on that later) you can supply the name as the index - `ChartObjects("SomeChart")`
+    * If you have named the chart (more on that later) you can supply the name as the index - `ChartObjects("SomeChart")`
 * The `Workbook.Sheets` object if your charts are contained in their own sheets
     * Same as above, you can access via a numeric index, name, or iterate through all of them
 
@@ -35,7 +35,7 @@ Since the Selection can hold anything, it's important to know what could be Sele
 * ChartTitle
 * Series
 
-If you are writing VBA to work on Charts, you can technically require the user to select the correct part of the chart and always use `Selection`.  You will quickly grow tired of having to remember which part of the Chart to select in order ot make teh code work.  To avoid this scenario, it is helpful to remember the object model and know how to work your way around a Chart.
+If you are writing VBA to work on Charts, you can technically require the user to select the correct part of the chart and always use `Selection`.  You will quickly grow tired of having to remember which part of the Chart to select in order ot make the code work.  To avoid this scenario, it is helpful to remember the object model and know how to work your way around a Chart.
 
 My approach has always been to convert the Selection to a Collection of ChartObjects. I can then always iterate that resulting Collection to process the Charts.  If only a single Chart was selected, the code works all the same.  The downside to this approach is that a Chart as a Sheet cannot live inside a ChartObject.  This is a large part of why I always put Charts on a Worksheet.
 
@@ -103,7 +103,7 @@ A typical workflow is included below since it is a pattern that shows up all the
 * Use ActiveSheet or a Worksheet reference to access the ChartObjects
 * Iterate through each ChartObject, storing a reference to the underlying Chart
 * You then setup sections to work through the parts of the Chart you want
-    * Iterate through teh SeriesCollection
+    * Iterate through the SeriesCollection
     * Iterate through the Axes
     * Touch the other top level properties including ChartTile, Legend, etc.
 
@@ -116,11 +116,11 @@ Another approach to using ChartObjects is to not iterate through all of them but
 
 When using either of these approaches, it is quite helpful to show the `Selection Pane` window in Excel.  This pane will pop out and tell you the order and the names of all the objects on the sheet (this includes comments, shapes, and Charts).  From this pane, you can rearrange the charts into the order you want or rename them.
 
-Although `For Each` loops are generally preferred when working with Charts, sometimes you simply know that you want to change one chart and an index just lets you do that.  If you are in the habit of using loops however, you can easily do that with teh helper code included above which stick a single chart into a Collection.
+Although `For Each` loops are generally preferred when working with Charts, sometimes you simply know that you want to change one chart and an index just lets you do that.  If you are in the habit of using loops however, you can easily do that with the helper code included above which stick a single chart into a Collection.
 
 #### Workbook.Sheets to get Chart references
 
-The final approach to obtaining a Chart reference is to use the Sheets object.  Aside from ActiveChart, this is the only way to deal with Charts that are their own Sheet.  Again, you cna either use an index or a Name.  Here, the Name is easily changed on teh Sheet tab so it's much more common to use a Name when doing this.  The other approach is to iterate through all the Sheets adn pick off the ones that are Charts.
+The final approach to obtaining a Chart reference is to use the Sheets object.  Aside from ActiveChart, this is the only way to deal with Charts that are their own Sheet.  Again, you cna either use an index or a Name.  Here, the Name is easily changed on the Sheet tab so it's much more common to use a Name when doing this.  The other approach is to iterate through all the Sheets and pick off the ones that are Charts.
 
 There are two key points when working with Charts as Sheets:
 

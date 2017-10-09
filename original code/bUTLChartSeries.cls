@@ -124,7 +124,7 @@ Public Sub UpdateFromChartSeries(targetSeries As series)
 
     '=SERIES("Y",Sheet1!$C$8:$C$13,Sheet1!$D$8:$D$13,1)
 
-    'pull in teh formula
+    'pull in the formula
     targetForm = targetSeries.Formula
 
     'uppercase to remove match errors

@@ -1,6 +1,6 @@
 ### common changes to the ChartObject
 
-The ChartObject is the main container for a Chart that is on a Worksheet.  The common changes then are related to the position and size fo the Chart on teh Worksheet.  The common properties to change here are:
+The ChartObject is the main container for a Chart that is on a Worksheet.  The common changes then are related to the position and size of the Chart on the Worksheet.  The common properties to change here are:
 
 * Top
 * Left
@@ -8,12 +8,12 @@ The ChartObject is the main container for a Chart that is on a Worksheet.  The c
 * Width
 * Placement (controls the move with cells option)
 
-All of these are of type Double which means you can use decimal calculations to determine the size or position.  In Excel, the 0,0 point is at the upper left hand corner (upper left of cell A1) and the Top and Left increase going to teh right and down.  If you are familiar with 0,0 being the center of the XY plane, then Excel will be a tad unfamiliar. Once you get used to it, you will realize that there is not really a better way to arrange the coordinate system since the spreadsheet can extend to the right and down nearly infinitely.
+All of these are of type Double which means you can use decimal calculations to determine the size or position.  In Excel, the 0,0 point is at the upper left hand corner (upper left of cell A1) and the Top and Left increase going to the right and down.  If you are familiar with 0,0 being the center of the XY plane, then Excel will be a tad unfamiliar. Once you get used to it, you will realize that there is not really a better way to arrange the coordinate system since the spreadsheet can extend to the right and down nearly infinitely.
 
 TODO: are there Bottom and Right properties too?
 TODO: add a comment about Points vs. inches here and the function to convert them
 
-The most common application of changing these properties is to either standardize the size of several charts or to arrange the charts in a grid (which standardizes teh size and then position).
+The most common application of changing these properties is to either standardize the size of several charts or to arrange the charts in a grid (which standardizes the size and then position).
 
 That code is included below:
 

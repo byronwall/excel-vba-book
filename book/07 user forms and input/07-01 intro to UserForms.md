@@ -1,6 +1,6 @@
 ## introduction to UserForms
 
-This chapter will focus on how to use UserForms to create interface that allow the user to interact with your VBA code.  UserForms can be used from anything to simple text inputs to very complicated forms.  There is really no limit to what you can do with UserForms, but at some point you will hit the limit fo what you want to do inside the VBE.  Some folks will push the limit and develop fully featured programs in Excel.  I'd highly recommend you not do that and instead use UserForms to augment a good usage of VBA with useful interactivity.
+This chapter will focus on how to use UserForms to create interface that allow the user to interact with your VBA code.  UserForms can be used from anything to simple text inputs to very complicated forms.  There is really no limit to what you can do with UserForms, but at some point you will hit the limit of what you want to do inside the VBE.  Some folks will push the limit and develop fully featured programs in Excel.  I'd highly recommend you not do that and instead use UserForms to augment a good usage of VBA with useful interactivity.
 
 When considering whether or not to use UserForms, there are a handful of pros and cons to using them.
 
@@ -13,11 +13,11 @@ Pros to using UserForms
 
 Cons to using UserForms
 
-There are a number of alternatives to creating a UserForm that are worth considering before committing to UserForms for a specific application.  Those alternatives and teh cons against UserForms include:
+There are a number of alternatives to creating a UserForm that are worth considering before committing to UserForms for a specific application.  Those alternatives and the cons against UserForms include:
 
-* Editing the code of a UserForm can be a bit of a nuisance because you have to flip between design adn code views
-* The InputBox provides a simple way to collect a number of different input types without needing to create your own form.  For simple inputs (including Ranges), the InputBox is typically simpler adn more consistent across applications
-* Some types of inputs (including lists) can be easier to manage in a non-VBA context by using default Excel features.  For example, you do not need a ListBox on a UserForm if you can put a Table somewhere in teh spreadsheet.
+* Editing the code of a UserForm can be a bit of a nuisance because you have to flip between design and code views
+* The InputBox provides a simple way to collect a number of different input types without needing to create your own form.  For simple inputs (including Ranges), the InputBox is typically simpler and more consistent across applications
+* Some types of inputs (including lists) can be easier to manage in a non-VBA context by using default Excel features.  For example, you do not need a ListBox on a UserForm if you can put a Table somewhere in the spreadsheet.
 * If you are trying to use some form of version control on your source code, UserForms are very difficult to manage and version.
 * If you want to provide buttons to perform an action, the Ribbon can be much more robust.  Of course editing the Ribbon can be a different pain, and I've gone the other way on this point before.
 

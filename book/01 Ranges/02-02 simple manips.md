@@ -8,7 +8,7 @@ These simple manipulations truly are simple. It includes things like:
 * Change the value of a group of cells
 * Change the formula of a cell
 * Change the formatting of a cell
-* Clear teh formatting or value from a cell
+* Clear the formatting or value from a cell
 * Return some piece of information about a cell
 
 TODO: deal with these later

@@ -27,18 +27,18 @@ There are two simple ways to "move" from a given `Range` to a new `Range`, namel
 * Use an existing `Range` to get the starting point for a `Range` and move over to a neighbor cell or a blank area to do something
       * THis is common when using one cell's value to determine the value of the next one (e.g. splitting on a delimiter)
       * THis is also common when adding formulas to a spreadsheet.  Find the current data, `Offset()` over a column and apply the formula to all cells.
-      * Also helpful when you "just know" that a desired `Range` is some distance away from teh `Range` you've got.  This is not the most elegant code at times (since it breaks easily), but it works reliably when you control the spreadsheet.
+      * Also helpful when you "just know" that a desired `Range` is some distance away from the `Range` you've got.  This is not the most elegant code at times (since it breaks easily), but it works reliably when you control the spreadsheet.
 
 TODO: add a while loop example
 TODO: add a formula example
 
 #### `End()`
 
-`End(xlDirection)` is a powerful function for its specific use case.  It replicates the functionality of the `CTRL+Arrow` keyboard shortcuts.  It will move from teh current `Range` as far as possible in a given direction so long as the cells are contiguous. Contiguous in this sense refers to the fact that the cells must not have a blank cell in between them.  A blank cell is any cell that does not have a value _or_ a formula.  The formula part is important because you can use a formula to return `""` while still counting as a contiguous `Range`.
+`End(xlDirection)` is a powerful function for its specific use case.  It replicates the functionality of the `CTRL+Arrow` keyboard shortcuts.  It will move from the current `Range` as far as possible in a given direction so long as the cells are contiguous. Contiguous in this sense refers to the fact that the cells must not have a blank cell in between them.  A blank cell is any cell that does not have a value _or_ a formula.  The formula part is important because you can use a formula to return `""` while still counting as a contiguous `Range`.
 
 `End()` takes a parameter which is the direction to travel in.  You can go all 4 directions, up/down and left/right.
 
-`End()` will always return a single cell as the reference.  This often means that `End()` is used alongside a `Range(Range, Range)` to get a multi-cell `Range` that spans from the start cell to teh end cell.  This is so common of a pattern, that I typically add a UDF that handles this logic directly.
+`End()` will always return a single cell as the reference.  This often means that `End()` is used alongside a `Range(Range, Range)` to get a multi-cell `Range` that spans from the start cell to the end cell.  This is so common of a pattern, that I typically add a UDF that handles this logic directly.
 
 TODO: add the function that is used `RangeEnd`
 
@@ -108,7 +108,7 @@ CTRL + / | `CurrentArray()`
 
 `CurrentRegion` is really only as useful as the data on the spreadsheet.  If you have a large block of data, it works well to get the entire region.  If you have blanks in your data, it's a bit of an unknown to know in advance what `CurrentRegion` will give you.  Typically, if you know you have a block of data, it can be a quick shortcut to using `End()` twice.  In general, I avoid it.
 
-`EntireRow` and `EntireColumn` are somewhat special because they can be used to make modifications to the rows and columns in Excel.  In particular, they are needed if you want to insert a row/column, delete a row/column, change the row/column formatting, or change the height/width of the row/column.  You can also use `Range("A:A")` or similar ot get a reference to teh entire column, but it is much simpler to have a reference to a `Range` of a single cell and work out from there.  Even better, if you have a multi-cell `Range`, the `Entire` functions will return the combination of all the rows or columns contained in the `Range`.
+`EntireRow` and `EntireColumn` are somewhat special because they can be used to make modifications to the rows and columns in Excel.  In particular, they are needed if you want to insert a row/column, delete a row/column, change the row/column formatting, or change the height/width of the row/column.  You can also use `Range("A:A")` or similar ot get a reference to the entire column, but it is much simpler to have a reference to a `Range` of a single cell and work out from there.  Even better, if you have a multi-cell `Range`, the `Entire` functions will return the combination of all the rows or columns contained in the `Range`.
 
 In addition to modifying the rows/columns of a `Worksheet`, the `Entire` functions also work very nicely with `Intersect()` to get group of cells that are in a specific row/column.  The `Entire` functions are generally much nicer than trying to build the `Range` from address or any other technique.
 
@@ -120,7 +120,7 @@ The final function in this round up is also the most powerful at times: `Special
 
 An example: if you have ever iterated through `UsedRange` or `Cells` with something that checks for `rng.Value = ""` then you could have saved a loop by using `SpecialCells(xlCellTypeBlanks)` instead.  This will return a new `Range` that only contains the blank cells.  There are similar special types for other things that commonly come up.
 
-One particular application of `SpecialCells` is when working with the `AutoFilter` which will cause rows to be `Hidden`.  You can get a `Range` that contains all of the visible rows which is the same as the rows which satisfy the filter.  If your data is well structured or can be filtered, this ends up being a great way to push teh burden of filtering onto Excel instead of having all that logic in VBA.
+One particular application of `SpecialCells` is when working with the `AutoFilter` which will cause rows to be `Hidden`.  You can get a `Range` that contains all of the visible rows which is the same as the rows which satisfy the filter.  If your data is well structured or can be filtered, this ends up being a great way to push the burden of filtering onto Excel instead of having all that logic in VBA.
 
 You can also use `SpecialCells` to quickly return a list of those cells which have a value (or formula) if you have a large block of sparse data.  Once you have all of those cells, you can `Intersect()` the `EntireColumn` (or row) with the header of the data.  This allows you to move quickly through data without having ot build addresses or remember where specific things are.  In general, this highlights an important strategy: if you can obtain `Ranges` with the areas that are critical, you cna quickly manipulate those `Ranges` to perform some action.  You can spend less time building finding cells and `Ranges` once you know how to work and combine these functions.
 
