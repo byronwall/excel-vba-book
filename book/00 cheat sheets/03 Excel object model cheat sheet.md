@@ -4,23 +4,24 @@ This cheat sheet will provide a quick glance at the most commonly used objects i
 
 TODO: finish this list
 
-* Application
+- Application
 
-* Workbooks -> Workbook
-    * Worksheets -> Worksheet
-    * Range -> Range
-        * Formula
-        * Value
-        * Address
-        * [formatting things]
-    * Cells -> Range
-    * ChartObjects -> ChartObject
-        * Chart
-            * Series
-            * Axes -> Axis
-            * ChartArea
-            * PlotArea
-    * Shapes -> Shape
-    * Names -> Name
-    * RefersToRange -> Range
+- Workbooks -> Workbook
+    - Worksheets -> Worksheet
+    - Range -> Range
+        - Formula
+        - Value
+        - Address
+        - [formatting things]
+        - Cells / Rows / Columns
+    - Cells -> Range
+    - ChartObjects -> ChartObject
+        - Chart
+            - Series
+            - Axes -> Axis
+            - ChartArea
+            - PlotArea
+    - Shapes -> Shape
+    - Names -> Name
+    - RefersToRange -> Range
 
