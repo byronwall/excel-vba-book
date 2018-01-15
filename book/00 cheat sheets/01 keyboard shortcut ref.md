@@ -14,6 +14,7 @@ SHIFT + Arrow | Resize()
 CTRL + Arrow | End()
 CTRL + Plus (+) | Insert()
 CTRL + SHIFT + L | AutoFilter()
+ALT + SEMICOLON | `SpecialCells(xlCellTypeVisible)`
 **Application related** ||
 F9 | Calculate
 CTRL + ALT + F9 | CalculateFull -or- CalculateFullRebuild
