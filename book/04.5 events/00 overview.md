@@ -104,6 +104,8 @@ THere are a number of patterns that are very common with Events.  These patterns
 
 The first is the `Intersect` technique to determine if a Range that was affected by an event was a Range of interest.  With this approach, you define a Range which includes your "interesting" cells.  You then do a `If Not Intersect(rngEvent, rngTarget) Is Nothign` to see if the interesection of the callback Range adn the desired Range overalp.  If they overlap, yhen you typically execute some code.  This allows you to quickly filter out Ranges which have hcanged but are not reelvenat ot ahtever code you need to run.
 
+TODO: add a code sample here
+
 ### Application.EnableEvents = FAlse
 
 One of the biggest gotchas with Events is that oyu can quickly and accidentally create an endless loop of Event code running if your event handler is able to retirgger the original event.  This is quite common if oyu are looking at the Selection and then change the selected cell.  The same can happen if you are using an event to watch for a change and then you rrespond wiht additiojnal cahnges.  Both of these accidents are so common, that you should seriously consider alwyas disbaling events in your handler.  It is quite rare that you will need an otehr event to fire following your own processing.
