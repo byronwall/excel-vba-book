@@ -9,4 +9,26 @@
 
 TODO: look into the Trace functions to see what they return
 
+#### Objects that will return a Range
+
+TODO: add content here about where Ranges can be obtained (and where they cannot)
+
+#### Using `Names().RefersToRange`
+
+TODO: add content here
+
+#### Using `Application.InputBox(, Type:=8)`
+
+TODO: add content here
+
+#### Using `Application.Index`
+
+TODO: add content here
+
+#### Using `Range.Find()`
+
+TODO: add content here
+
+#### Pulling a Range from a Formula with string processing
+
 TODO: add content here
