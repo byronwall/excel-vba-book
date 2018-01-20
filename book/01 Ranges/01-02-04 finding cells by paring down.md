@@ -84,7 +84,7 @@ The subset functions work by providing you with a Range that is created from ano
 * Rows and Colujmns will each return a new iterable object built of the previous Range sliced into its Rows or Columns.  If call them in order, it will look the same as iterating through Cells except that the order may be difference (TODO: how does this work?).  Be sure that if oyu want to yuse htese, avoid the properties with the "s".  If you call Row ro Column, you will just get a number instead of a group of Ranges
 * Areas will return a group of cells that may contain groups of Rows or Columns or just individual Cells.  Areas are commonly built by users using `CTRL` to select multiple things or by VBA which uses `Union` to build Ranges.
 
-TODO: add some specific code related to Columns and Rows
+TODO: add some specific code related to Columns and Rows... that code is quite useful as a replacement to Cells(i,j)
 
 TODO: give an example of using Areas
 
