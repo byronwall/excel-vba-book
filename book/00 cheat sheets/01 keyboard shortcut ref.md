@@ -1,4 +1,4 @@
-# keyboard shortcut reference
+## keyboard shortcut reference
 
 This will contain a table that gives the equivalent commands for different keyboard shortcuts.  It does not intend to be exhaustive but instead to hit all the major ones.
 
