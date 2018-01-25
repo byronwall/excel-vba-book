@@ -9,11 +9,11 @@ Public Sub ChartMergeSeries()
 
     Dim isFirstChart As Boolean
     isFirstChart = True
-    
+
     Application.ScreenUpdating = False
-    
+
     For Each targetObject In Chart_GetObjectsFromObject(Selection)
-    
+
         Set targetChart = targetObject.Chart
         If isFirstChart Then
             Set firstChart = targetChart
@@ -39,7 +39,7 @@ Public Sub ChartMergeSeries()
 
         End If
     Next targetObject
-    
+
     Application.ScreenUpdating = True
 
 End Sub
