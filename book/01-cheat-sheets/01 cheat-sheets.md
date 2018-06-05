@@ -1,3 +1,3 @@
 # cheat sheets
 
-This section will contain various cheat sheets whcih are helpful.
+This section will contain various cheat sheets which are helpful.

@@ -12,9 +12,18 @@ function createConcatFile() {
     });
 
     const result = fileContents.join("\n");
+
+    if (!fs.existsSync("../newbook/")) {
+      fs.mkdirSync("../newbook/");
+    }
+
     fs.writeFileSync("../newbook/concat.md", result, "utf-8");
 
     // take that file and read it into lines
+
+    splitConcatIntoSections();
+
+    fs.unlinkSync("../newbook/concat.md");
   });
 }
 
@@ -131,4 +140,4 @@ var cleanName = function(name) {
   return name.replace(/[^a-zA-Z0-9\-]/gi, ""); // Strip any special charactere
 };
 
-splitConcatIntoSections();
+createConcatFile();
