@@ -1,1 +1,1 @@
-pandoc  ../book/*/*.md  -o ../builds/book.pdf --template=./eisvogel.latex --listings --toc
+pandoc  ../book/*/*.md  -V papersize:letter -o ../builds/book.pdf --template=./eisvogel.latex --listings --toc 
