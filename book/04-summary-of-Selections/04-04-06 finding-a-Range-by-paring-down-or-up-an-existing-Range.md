@@ -7,10 +7,10 @@ Using a `Range` to get the next `Range` really is the bread and butter of seriou
 When using these techniques, there are a couple of common strategies. They work by either paring down the current `Range`, moving the current `Range`, or using the current `Range` as the start of some expansion. Of course, since a `Range` can be used to access a `Range`, you will quickly find yourself chaining these functions together. That is the true power of these techniques. Very often you will use 2 or 3 to take a single cell, move to a new spot, resize to cover all of the data and then move over a column to do something.
 
 - Take an existing `Range`, possibly all cells, and pare it down using:
-  _ Move from a known cell to a new spot -- `Offset()`, `End()`
-  _ Take a subset of an existing `Range` -- `Cells`, `Rows`, `Columns`, `Areas`
-  _ Take a an existing `Range` and change its size -- `Resize()`
-  _ Take a super set of an existing `Range` -- `EntireColumn`, `EntireRow`, `CurrentRegion`, `CurrentArray` \* Allow Excel to filter the `Range` based on things it tracks (e.g. value, blank, hidden, etc.) -- `SpecialCells()`
+  - Move from a known cell to a new spot -- `Offset()`, `End()`
+  - Take a subset of an existing `Range` -- `Cells`, `Rows`, `Columns`, `Areas`
+  - Take a an existing `Range` and change its size -- `Resize()`
+  - Take a super set of an existing `Range` -- `EntireColumn`, `EntireRow`, `CurrentRegion`, `CurrentArray` \* Allow Excel to filter the `Range` based on things it tracks (e.g. value, blank, hidden, etc.) -- `SpecialCells()`
 
 #### move to a new spot, `Offset()` and `End()`
 
@@ -21,11 +21,11 @@ There are two simple ways to "move" from a given `Range` to a new `Range`, namel
 `Offset(rows, columns)` works by moving the given `Range` over by the parameters given to it. The nice thing about `Offset()` is that the parameters can be negative to move backwards. There are a couple of simple use cases for `Offset()`:
 
 - Work your way down or across a group of cells, by `Offsetting()` and setting a reference to the new cell
-  _ This is often paired with a `While` loop to work down a `Range`
-  _ This is also helpful when you are not exactly sure what `Range` you want (maybe it's dependent on cell values) so you can't simply assign the correct multi-cell `Range` at the start.
+  - This is often paired with a `While` loop to work down a `Range`
+  - This is also helpful when you are not exactly sure what `Range` you want (maybe it's dependent on cell values) so you can't simply assign the correct multi-cell `Range` at the start.
 - Use an existing `Range` to get the starting point for a `Range` and move over to a neighbor cell or a blank area to do something
-  _ THis is common when using one cell's value to determine the value of the next one (e.g. splitting on a delimiter)
-  _ THis is also common when adding formulas to a spreadsheet. Find the current data, `Offset()` over a column and apply the formula to all cells. \* Also helpful when you "just know" that a desired `Range` is some distance away from the `Range` you've got. This is not the most elegant code at times (since it breaks easily), but it works reliably when you control the spreadsheet.
+  - THis is common when using one cell's value to determine the value of the next one (e.g. splitting on a delimiter)
+  - THis is also common when adding formulas to a spreadsheet. Find the current data, `Offset()` over a column and apply the formula to all cells. \* Also helpful when you "just know" that a desired `Range` is some distance away from the `Range` you've got. This is not the most elegant code at times (since it breaks easily), but it works reliably when you control the spreadsheet.
 
 TODO: add a while loop example
 TODO: add a formula example
@@ -43,8 +43,8 @@ TODO: add the function that is used `RangeEnd`
 There are a few common patterns when working with `End()`:
 
 - Use a `Range` that you know is at the top of a block of data and use `End(xlDown)` to get to the bottom of the column.
-  _ This can be combined with `Range(Range, Range)` to get the full multi-cell `Range` to work through
-  _ THis technique is very powerful when redefining the `Ranges` of a chart to include all of the cells (this can also be used for formulas too).
+  - This can be combined with `Range(Range, Range)` to get the full multi-cell `Range` to work through
+  - THis technique is very powerful when redefining the `Ranges` of a chart to include all of the cells (this can also be used for formulas too).
 - If you know your data has blanks, you can use `End()` to jump to the next non-blank cell. \* This is helpful if you are trying to fill in blank cells (TODO: add the Waterfall fill here)
 
 ##### RangeEnd.md

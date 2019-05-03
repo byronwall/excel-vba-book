@@ -21,6 +21,5 @@
     ],
     "todo.embedded.providers.ag.regex": "(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE)",
     "todo.embedded.providers.rg.regex": "(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE)",
-    "todo.embedded.regex": "*(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE):.*",
-    "prettier.proseWrap": "always"
+    "todo.embedded.regex": "*(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE):.*"
 }
