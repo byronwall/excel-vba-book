@@ -3,14 +3,14 @@
 - calling `Range`
 - calling `Cells`
 - from an existing Range
-  _ Cells
-  _ Rows
-  _ Columns
-  _ SpecialCells
-  _ Offset
-  _ Resize
-  _ EntireRegion
-  _ End
+  - Cells
+  - Rows
+  - Columns
+  - SpecialCells
+  - Offset
+  - Resize
+  - EntireRegion
+  - End
 - from a Name object
 - using `Selection`
 - using `ActiveCell`
