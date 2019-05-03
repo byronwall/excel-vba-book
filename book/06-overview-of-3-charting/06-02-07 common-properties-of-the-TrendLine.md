@@ -9,6 +9,7 @@ The most likely properties you'll use:
 - Parameter
 
 TODO: confirm these are correct
+
 TODO: add an example showing how to add a Trendline for every Series
 
 #### Chart_AddTrendlineToSeriesAndColor.md

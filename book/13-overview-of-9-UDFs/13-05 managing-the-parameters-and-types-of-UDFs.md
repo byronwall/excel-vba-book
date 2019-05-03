@@ -33,4 +33,5 @@ TODO: add an example of string concat code that works
 The most common spot to see this sort of issue is when deciding whether to deal with a type of Range or Variant (to handle an array). It is nice to work directly with Ranges and avoid the Variant, but this will make your code weak against someone who wants to use an array formula to call your UDF. It typically does no take much work to process an Array, but it helps to design things from th start like that.
 
 TODO: add before example of UDF using Range
+
 TODO: add after example of that UDF using a Variant/Array instead of the Range

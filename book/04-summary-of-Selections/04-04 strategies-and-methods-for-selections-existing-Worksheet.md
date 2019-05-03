@@ -8,13 +8,13 @@ When working with data in an existing `Worksheet`, the main goal is to find the 
 - Name a cell and use that name directly -- `Range("CellName")`
 - Iterate through all cells -- `Cells`, `UsedRange`
 - While iterating through cells, use some logic to identify if a `Range` is the one you want:
-  _ Check the `Value` of the cell
-  _ Check if the cell has some property (e.g. `HasFormula`, `HasArray`, etc.) \* Check the `Style` of the cell
+  - Check the `Value` of the cell
+  - Check if the cell has some property (e.g. `HasFormula`, `HasArray`, etc.) \* Check the `Style` of the cell
 - Take an existing `Range`, possibly all cells, and pare it down using:
-  _ Move from a known cell to a new spot -- `Offset()`, `End()`
-  _ Take a subset of an existing `Range` -- `Cells`, `Rows`, `Columns`, `Areas`
-  _ Take a an existing `Range` and change its size -- `Resize()`
-  _ Take a super set of an existing `Range` -- `EntireColumn`, `EntireRow`, `CurrentRegion`, `CurrentArray` \* Allow Excel to filter the `Range` based on things it tracks (e.g. value, blank, hidden, etc.) -- `SpecialCells()`
+  - Move from a known cell to a new spot -- `Offset()`, `End()`
+  - Take a subset of an existing `Range` -- `Cells`, `Rows`, `Columns`, `Areas`
+  - Take a an existing `Range` and change its size -- `Resize()`
+  - Take a super set of an existing `Range` -- `EntireColumn`, `EntireRow`, `CurrentRegion`, `CurrentArray` \* Allow Excel to filter the `Range` based on things it tracks (e.g. value, blank, hidden, etc.) -- `SpecialCells()`
 - Identify several `Ranges` and combine them -- `Union()`
 - Identify several `Ranges` and use only the common cells -- `Intersect()`
 - Pull the `Range` reference from some other object

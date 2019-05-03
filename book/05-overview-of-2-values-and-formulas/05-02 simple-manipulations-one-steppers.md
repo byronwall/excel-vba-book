@@ -14,6 +14,7 @@ These simple manipulations truly are simple. It includes things like:
 TODO: deal with these later
 
 Name a group of cells
+
 Add a hyperlink to the current cell
 
 TODO: add a couple examples of the simple manipulations

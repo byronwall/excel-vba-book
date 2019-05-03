@@ -28,6 +28,7 @@ There are two simple ways to "move" from a given `Range` to a new `Range`, namel
   - THis is also common when adding formulas to a spreadsheet. Find the current data, `Offset()` over a column and apply the formula to all cells. \* Also helpful when you "just know" that a desired `Range` is some distance away from the `Range` you've got. This is not the most elegant code at times (since it breaks easily), but it works reliably when you control the spreadsheet.
 
 TODO: add a while loop example
+
 TODO: add a formula example
 
 #### `End()`
@@ -96,6 +97,7 @@ TODO: give an example of using Areas
 In general, these uses follow a pattern: you know what size you want the `Range` to be (or can compute the size) and `Resize` gives you the `Range` back. This is one of the least controversial of the `Range` methods. Enough said.
 
 TODO: how does this handle negative numbers
+
 TODO: how does this handle a multi-cell range, does it always pick top left?
 
 #### Take a super set of an existing `Range` -- `EntireColumn`, `EntireRow`, `CurrentRegion`, `CurrentArray`
@@ -130,4 +132,5 @@ One particular application of `SpecialCells` is when working with the `AutoFilte
 You can also use `SpecialCells` to quickly return a list of those cells which have a value (or formula) if you have a large block of sparse data. Once you have all of those cells, you can `Intersect()` the `EntireColumn` (or row) with the header of the data. This allows you to move quickly through data without having ot build addresses or remember where specific things are. In general, this highlights an important strategy: if you can obtain `Ranges` with the areas that are critical, you cna quickly manipulate those `Ranges` to perform some action. You can spend less time building finding cells and `Ranges` once you know how to work and combine these functions.
 
 TODO: add the table manipulation code here to give an example of that
+
 TODO: consider adding an example of using SpecialCells with filtering
