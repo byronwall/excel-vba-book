@@ -10,7 +10,7 @@ Public Sub Chart_CreateChartWithSeriesForEachColumn()
     'create a chart
     Dim targetObject As ChartObject
     Set targetObject = ActiveSheet.ChartObjects.Add(0, 0, 300, 300)
-    
+
     targetObject.Chart.ChartType = xlXYScatter
 
     Dim targetColumn As Range
@@ -18,10 +18,10 @@ Public Sub Chart_CreateChartWithSeriesForEachColumn()
 
         Dim chartDataRange As Range
         Set chartDataRange = RangeEnd(targetColumn.Cells(1, 1), xlDown)
-        
+
         Dim butlSeries As New bUTLChartSeries
         Set butlSeries.Values = chartDataRange
-        
+
         butlSeries.AddSeriesToChart targetObject.Chart
     Next targetColumn
 

@@ -22,10 +22,10 @@ Public Sub SeriesSplitIntoBins()
 
     minimumValue = Application.InputBox("Minimum value.", "Min", _
                                         WorksheetFunction.Min(selectedRange), Type:=1)
-                                   
+
     maximumValue = Application.InputBox("Maximum value.", "Max", _
                                         WorksheetFunction.Max(selectedRange), Type:=1)
-                                   
+
     binValue = Application.InputBox("Number of groups.", "Bins", _
                                     WorksheetFunction.RoundDown(Math.Sqr(WorksheetFunction.Count(selectedRange)), _
                                     0), Type:=1)

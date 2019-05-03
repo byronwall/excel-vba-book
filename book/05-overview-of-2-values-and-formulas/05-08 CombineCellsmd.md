@@ -14,16 +14,16 @@ Public Sub CombineCells()
 
     Dim outputRange As Range
     Set outputRange = GetInputOrSelection("Select the output range")
-    
+
     'Check the size of input and adjust output
     Dim numberOfColumns As Long
     numberOfColumns = inputRange.Columns.Count
-    
+
     Dim numberOfRows As Long
     numberOfRows = inputRange.Rows.Count
-    
+
     outputRange = outputRange.Resize(numberOfRows, 1)
-    
+
     'Read input rows into a single string
     Dim outputString As String
     Dim i As Long

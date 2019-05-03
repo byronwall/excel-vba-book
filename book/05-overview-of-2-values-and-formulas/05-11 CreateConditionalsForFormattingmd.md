@@ -10,7 +10,7 @@ Public Sub CreateConditionalsForFormatting()
     Const ARRAY_MARKERS As String = " ,k,M,B,T,Q"
     Dim arrMarkers As Variant
     arrMarkers = Split(ARRAY_MARKERS, ",")
-    
+
     Dim i As Long
     For i = UBound(arrMarkers) To 0 Step -1
 

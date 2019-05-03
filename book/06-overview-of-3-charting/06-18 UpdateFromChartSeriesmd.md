@@ -3,12 +3,12 @@
 ```vb
 Public Sub UpdateFromChartSeries(targetSeries As series)
 
-    
+
     'this will work for the simple case where all items are references
     Const FIND_STRING As String = "SERIES("
     Const COMMA As String = ","
     Const CLOSE_BRACKET As String = ")"
-    
+
     Set series = targetSeries
 
     Dim targetForm As Variant
@@ -23,7 +23,7 @@ Public Sub UpdateFromChartSeries(targetSeries As series)
 
     'remove the front of the formula
     targetForm = Replace(targetForm, FIND_STRING, vbNullString)
-    
+
     'find the first foundPosition
     Dim foundPosition As Long
     foundPosition = InStr(targetForm, COMMA)
@@ -42,7 +42,7 @@ Public Sub UpdateFromChartSeries(targetSeries As series)
     foundPosition = InStr(targetForm, COMMA)
 
     If foundPosition > 1 Then Set Me.XValues = Range(left(targetForm, foundPosition - 1))
- 
+
     targetForm = Mid(targetForm, foundPosition + 1)
 
     foundPosition = InStr(targetForm, COMMA)

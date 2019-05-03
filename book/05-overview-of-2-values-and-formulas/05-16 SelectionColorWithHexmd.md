@@ -12,7 +12,7 @@ Public Sub Selection_ColorWithHex()
                                     WorksheetFunction.Hex2Dec(Mid(targetCell.Value, 2, 2)), _
                                     WorksheetFunction.Hex2Dec(Mid(targetCell.Value, 4, 2)), _
                                     WorksheetFunction.Hex2Dec(Mid(targetCell.Value, 6, 2)))
-                                    
+
     Next targetCell
     Exit Sub
 errHandler:

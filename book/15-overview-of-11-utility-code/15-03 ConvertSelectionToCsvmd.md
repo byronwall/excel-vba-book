@@ -12,10 +12,10 @@ Public Sub ConvertSelectionToCsv()
 
     Dim dataRow As Range
     For Each dataRow In sourceRange.Rows
-        
+
         Dim dataArray As Variant
         dataArray = Application.Transpose(Application.Transpose(dataRow.Rows.Value2))
-        
+
         'TODO:  improve this to use another Join instead of string concats
         outputString = outputString & Join(dataArray, ",") & vbCrLf
 

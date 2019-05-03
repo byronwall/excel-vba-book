@@ -16,5 +16,3 @@ Public Sub Chart_GoToXRange()
 
 End Sub
 ```
-
-

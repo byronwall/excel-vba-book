@@ -1,12 +1,12 @@
 ### common properties of the TrendLine
 
-The TrendLine is one of the lesser used properties, but it can be a real time saver when using VBA if you need to.  The problem with the trendline normally is that you are required to work through a ton of menus to configure the properties.  This is even more painful when you've got to do the same thing to multiple Series in a Chart or across multiple Charts.  Similar to the other objects here, you can use VBA to quickly do the task that is otherwise a pain.
+The TrendLine is one of the lesser used properties, but it can be a real time saver when using VBA if you need to. The problem with the trendline normally is that you are required to work through a ton of menus to configure the properties. This is even more painful when you've got to do the same thing to multiple Series in a Chart or across multiple Charts. Similar to the other objects here, you can use VBA to quickly do the task that is otherwise a pain.
 
 The most likely properties you'll use:
 
-* Creating one off of a series
-* Type
-* Parameter
+- Creating one off of a series
+- Type
+- Parameter
 
 TODO: confirm these are correct
 TODO: add an example showing how to add a Trendline for every Series

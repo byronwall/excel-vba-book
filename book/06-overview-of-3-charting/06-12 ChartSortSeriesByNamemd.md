@@ -26,11 +26,9 @@ Public Sub Chart_SortSeriesByName()
                     butlSeries2.UpdateSeriesWithNewValues
                     butlSeries1.UpdateSeriesWithNewValues
                 End If
-                
+
             Next secondChartIndex
         Next firstChartIndex
     Next targetObject
 End Sub
 ```
-
-

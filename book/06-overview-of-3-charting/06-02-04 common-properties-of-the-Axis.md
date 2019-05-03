@@ -1,18 +1,18 @@
 ### common properties of the Axis
 
-The Axis is the second most common object to work with (behind the Series).  This is largely because the Axis controls or provides access to a lot of the formatting related aspects of the CHart.  The Axis also controls the scale of the Axis and in that regard, is a critical part of making or editing a Chart.
+The Axis is the second most common object to work with (behind the Series). This is largely because the Axis controls or provides access to a lot of the formatting related aspects of the CHart. The Axis also controls the scale of the Axis and in that regard, is a critical part of making or editing a Chart.
 
-The first part of the Axis is accessing the correct one.  This is slightly tricky the first time because the Axes are stored in the Chart.Axes object.  THe real trick is that this object is indexed by the xlAxisType (TODO: check that) which can be xlCategory (for the x-axis) or xlValue/xlValue2 (for the y-axis, left and right).
+The first part of the Axis is accessing the correct one. This is slightly tricky the first time because the Axes are stored in the Chart.Axes object. THe real trick is that this object is indexed by the xlAxisType (TODO: check that) which can be xlCategory (for the x-axis) or xlValue/xlValue2 (for the y-axis, left and right).
 
 Once you have an Axis object, you can set to work changing the common properties:
 
-* Scale related
-    * MinimumScale/MaximumScale
-    * MinimumScaleIsAuto/MaximumScaleIsAuto
-* Formatting related (most of these are accessors to a different object)
-    * GridLines (Major/minor and the HasXXX)
-    * Ticks (TODO: that right?)
-    * HasTitle and AxisTitle
+- Scale related
+  - MinimumScale/MaximumScale
+  - MinimumScaleIsAuto/MaximumScaleIsAuto
+- Formatting related (most of these are accessors to a different object)
+  - GridLines (Major/minor and the HasXXX)
+  - Ticks (TODO: that right?)
+  - HasTitle and AxisTitle
 
 #### Chart_Axis_AutoX.md
 

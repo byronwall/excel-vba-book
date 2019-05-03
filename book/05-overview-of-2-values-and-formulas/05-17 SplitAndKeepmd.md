@@ -7,7 +7,7 @@ Public Sub SplitAndKeep()
 
     Dim rangeToSplit As Range
     Set rangeToSplit = GetInputOrSelection("Select range to split")
-    
+
     If rangeToSplit Is Nothing Then
         Exit Sub
     End If
@@ -22,21 +22,21 @@ Public Sub SplitAndKeep()
     Dim itemToKeep As Variant
     'Perhaps inform user to input the sequence number of the item to keep
     itemToKeep = InputBox("Which item to keep? (This is 0-indexed)")
-    
+
     If StrPtr(itemToKeep) = 0 Then
         Exit Sub
     End If
 
     Dim targetCell As Range
     For Each targetCell In Intersect(rangeToSplit, rangeToSplit.Parent.UsedRange)
-        
+
         Dim delimitedCellParts As Variant
         delimitedCellParts = Split(targetCell, delimiter)
-        
+
         If UBound(delimitedCellParts) >= itemToKeep Then
             targetCell.Value = delimitedCellParts(itemToKeep)
         End If
-        
+
     Next targetCell
 
     On Error GoTo 0

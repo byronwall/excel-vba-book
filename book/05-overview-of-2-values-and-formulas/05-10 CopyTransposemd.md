@@ -6,7 +6,7 @@ Public Sub CopyTranspose()
     'If user cancels a range input, we need to handle it when it occurs
     On Error GoTo errCancel
     Dim selectedRange As Range
-    
+
     Set selectedRange = GetInputOrSelection("Select your range")
 
     Dim outputRange As Range
@@ -31,7 +31,7 @@ Public Sub CopyTranspose()
     outputColumn = outputRange.Column
 
     Dim targetCell As Range
-    
+
     'We check for the intersection to ensure we don't overwrite any of the original data
     'There's probably a better way to do this than For Each
     For Each targetCell In selectedRange

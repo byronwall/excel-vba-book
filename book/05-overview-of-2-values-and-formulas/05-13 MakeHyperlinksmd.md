@@ -7,7 +7,7 @@ Public Sub MakeHyperlinks()
     On Error GoTo errHandler
     Dim targetRange As Range
     Set targetRange = GetInputOrSelection("Select the range of cells to convert to hyperlink")
-    
+
     'TODO: choose a better variable name
     Dim targetCell As Range
     For Each targetCell In targetRange

@@ -12,7 +12,7 @@ Public Sub ExtendArrayFormulaDown()
     Set startingRange = Selection
 
     For Each targetArea In startingRange.Areas
-    
+
         Dim targetCell As Range
         For Each targetCell In targetArea.Cells
 

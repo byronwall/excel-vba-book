@@ -10,12 +10,12 @@ Public Sub Colorize()
     lastRow = targetRange.Rows.Count
     Dim interiorColor As Long
     interiorColor = RGB(200, 200, 200)
-    
+
     Dim sameColorForLikeValues As VbMsgBoxResult
     sameColorForLikeValues = MsgBox("Do you want to keep duplicate values the same color?", vbYesNo)
 
     If sameColorForLikeValues = vbNo Then
-        
+
         Dim i As Long
         For i = 1 To lastRow
             If i Mod 2 = 0 Then

@@ -30,7 +30,7 @@ Public Sub CombineAllSheetsData()
                 'copy over all headers
                 sourceWorksheet.Rows(1).Copy targetWorksheet.Range("A1")
                 isFirst = False
-            
+
             Else
                 'search for missing columns
                 Dim headerRow As Range

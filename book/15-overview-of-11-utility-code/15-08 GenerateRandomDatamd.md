@@ -6,7 +6,7 @@ Public Sub GenerateRandomData()
     Const NUMBER_OF_ROWS As Long = 10
     Const NUMBER_OF_COLUMNS As Long = 3 '0 index
     Const DEFAULT_COLUMN_WIDTH As Long = 15
-    
+
     'Since we only work with offset, targetcell can be a constant, but range constants are awkward
     Dim targetCell As Range
     Set targetCell = Range("B2")

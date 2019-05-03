@@ -11,21 +11,21 @@ Public Sub TrimSelection()
     Application.ScreenUpdating = False
     Application.EnableEvents = False
     Application.Calculation = xlCalculationManual
-    
+
     'force to only consider used range
     Set rangeToTrim = Intersect(rangeToTrim, rangeToTrim.Parent.UsedRange)
 
     Dim targetCell As Range
     For Each targetCell In rangeToTrim
-        
+
         'only change if needed
         Dim temporaryTrimHolder As Variant
         temporaryTrimHolder = Trim(targetCell.Value)
-        
+
         'added support for char 160
         'TODO add more characters to remove
         temporaryTrimHolder = Replace(temporaryTrimHolder, chr(160), vbNullString)
-        
+
         If temporaryTrimHolder <> targetCell.Value Then targetCell.Value = temporaryTrimHolder
 
     Next targetCell

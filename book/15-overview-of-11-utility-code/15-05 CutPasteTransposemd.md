@@ -31,7 +31,7 @@ Public Sub CutPasteTranspose()
     outputColumn = outputRange.Column
 
     outputRange.Activate
-    
+
     'Check to not overwrite
     Dim targetCell As Range
     For Each targetCell In sourceRange
@@ -40,14 +40,14 @@ Public Sub CutPasteTranspose()
             GoTo errHandler
         End If
     Next
-    
+
     'this can be better
     For Each targetCell In sourceRange
         targetCell.Cut
         ActiveSheet.Cells(outputRow + targetCell.Column - leftColumn, outputColumn + targetCell.Row - topRow).Activate
         ActiveSheet.Paste
     Next targetCell
-    
+
 errHandler:
     Application.CutCopyMode = False
     Application.ScreenUpdating = True

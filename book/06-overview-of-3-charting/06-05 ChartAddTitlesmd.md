@@ -15,12 +15,12 @@ Public Sub Chart_AddTitles()
                 .Axes(xlCategory).HasTitle = True
                 .Axes(xlCategory).AxisTitle.Text = X_AXIS_TITLE
             End If
-    
+
             If Not .Axes(xlValue, xlPrimary).HasTitle Then
                 .Axes(xlValue).HasTitle = True
                 .Axes(xlValue).AxisTitle.Text = Y_AXIS_TITLE
             End If
-    
+
             '2015 12 14, add support for 2nd y axis
             If .Axes.Count = 3 Then
                 If Not .Axes(xlValue, xlSecondary).HasTitle Then
@@ -28,7 +28,7 @@ Public Sub Chart_AddTitles()
                     .Axes(xlValue, xlSecondary).AxisTitle.Text = SECOND_Y_AXIS_TITLE
                 End If
             End If
-    
+
             If Not .HasTitle Then
                 .HasTitle = True
                 .ChartTitle.Text = CHART_TITLE

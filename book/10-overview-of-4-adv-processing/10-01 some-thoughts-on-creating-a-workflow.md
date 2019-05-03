@@ -4,9 +4,9 @@ If you are sitting down to create an advanced workflow, there are a handful of t
 
 Your VBA workflow will contain steps or sub steps that roughly be described as:
 
-* Inputs
-* Intermediate results
-* Outputs
+- Inputs
+- Intermediate results
+- Outputs
 
 If your workflow is advnaced enoguh to include a number of sub steps built from other steps, then you are likely to find that this breakdown applies within and across levels of your workflow. That is, the outputs of one step may very well be the inputs to another step. The intermediate result from one action will be the input for another.
 

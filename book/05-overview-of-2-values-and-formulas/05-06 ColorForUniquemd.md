@@ -5,7 +5,7 @@ Public Sub ColorForUnique()
 
     Dim dictKeysAndColors As New Scripting.Dictionary
     Dim dictColorsOnly As New Scripting.Dictionary
-    
+
     Dim targetRange As Range
 
     On Error GoTo ColorForUnique_Error
@@ -41,7 +41,7 @@ createNewColor:
                 'ensure unique colors only
                 GoTo createNewColor 'This is a sub-optimal way of performing this error check and loop
             End If
-                
+
             dictKeysAndColors.Add keyString, randomColor
         End If
 

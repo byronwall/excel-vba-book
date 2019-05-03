@@ -10,7 +10,7 @@ Public Sub ChartFlipXYValues()
 
         Dim butlSeriesies As New Collection
         Dim butlSeries As bUTLChartSeries
-        
+
         Dim targetSeries As series
         For Each targetSeries In targetChart.SeriesCollection
             Set butlSeries = New bUTLChartSeries
@@ -50,7 +50,7 @@ Public Sub ChartFlipXYValues()
             targetChart.Axes(xlCategory).HasTitle = True
             targetChart.Axes(xlCategory).AxisTitle.Text = targetChart.Axes(xlValue).AxisTitle.Text
             targetChart.Axes(xlValue).HasTitle = False
-            
+
         ElseIf targetChart.Axes(xlCategory).HasTitle And targetChart.Axes(xlValue).HasTitle Then
             Dim swapText As String
 
