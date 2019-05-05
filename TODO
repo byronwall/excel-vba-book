@@ -98,3 +98,4 @@ Spell checking:
   ☐ Use a spell check tool to find misspelled words
   ☐ Keep track of common replacements so they can be automatically done again
   ☐ Create a simple script to replace spelling errors across all files
+  ☐ Apply the backtick to common words that should be within code blocks
