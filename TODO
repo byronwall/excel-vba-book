@@ -1,0 +1,96 @@
+ignore the ID numbers, they are from previous TODO list
+
+General:
+  ☐ 103 Build a tool to find common corrections
+  134 Sections that need major attention:
+    ☐ 135 Workbooks
+    ☐ 136 Worksheets
+    ☐ 137 Application
+  ☐ 23 Check the final code files
+  24 Bulk processing:
+    ☐ 25 Remove the comment section from the top of the code segments (regex)
+    ☐ 26 Add a header to the code samples
+    ☐ 27 Add a blank line to the end of the code samples
+    ☐ 28 Rename the overview files 00 overview
+  30 Delete the code samples that were already used:
+    ☐ 32 RandomCode
+    ☐ 34 Testing
+    ☐ 35 P2942
+    ☐ 36 Updater
+  ☐ 38 Generate a measure of completeness for all of the chapters
+  ☐ 4 Create a project here for each chapter
+  ☐ 68 Run through all of the TODOs and put into the program
+  ☐ 72 Process the StackOverflow files for good content
+  79 Print a first copy to start editing:
+     ☐ 80 Fix all spelling errors
+     ☐ 81 Determine which code segments to remove or archive
+     ☐ 82 Review the TODOs
+  8 Put bUTL code into the chapter folders:
+     ☐ 14 Move those files from code samples to the section
+     ☐ 18 Identify which sections of code go where
+
+  ☐ 83 Update all of the TODOs to use more descriptive labels
+
+Ideas for content:
+  ☐ 16 Cheat sheet that shows the correspondence between keyboard shortcuts and VBA
+  ☐ 40 Using the Workbook_Save event to compact data
+  ☐ 42 Consider dividing the sections based on the main object?
+  ☐ 44 Some comments on notation `Range()` vs. `Range`
+  ☐ 46 Add some general comments on operators to use
+  ☐ 48 Add a section for generic `Array` handling
+  ☐ 50 Add a section for working with the Windows clipboard
+  ☐ 52 Add a blurb about using `Parent` to move through the object model
+  ☐ 54 Add a section about the good and bad uses of `With`
+  56 Useful Workbook functions:
+     ☐ 57 FollowHyperlink
+  ☐ 59 Using the Dictionary
+  ☐ 61 Supplying optional parameters, pros/cons
+  ☐ 63 Using the FileDialog for user input
+  ☐ 70 Add a section for how to get the most use out of the macro recorder
+  
+
+Selections:
+  ☐ 21 Determine the sections for the chapter
+  ☐ 74 Rename this section to refer to Ranges instead of selections
+
+Charting:
+   ☐ 67 Break out the chapters for the common things to include more code samples
+
+values:
+  ☐ 77 Consider combining this with the Range chapter
+
+
+
+Intro and Overview:
+  ☐ 100 add a defintion of Intellisense somewhere #content
+  109 Logic section:
+    ☐ 110 Add examples of using the If-Then forms
+    ☐ 112 Add example of the Select-Case
+  114 Loops:
+    ☐ 115 Add an example comparing a Cells loop vs a For Each
+    ☐ 117 Add a list of iterable collections that can be handled with For Each
+    ☐ 119 Create For content
+    ☐ 120 Create Do/While content
+    ☐ 122 What actually happens when you edit a collection while iterating through it using a For Each?
+    ☐ 124 Create an example of deleting from a collection in a For loop
+  126 Debugging:    
+    ☐ 128 Add a descriptionn of using CTRL+BREAK to stop code
+
+  130 Other control structures:
+    ☐ 131 Add information about With
+    ☐ 132 Add info about Goto and Labels
+    ☐ 133 Add info about error handling
+
+
+  ☐ 86 Add pictures of enabling the VBE and how to get started #pictures
+  ☐ 88 Create variables section #content
+
+  90 Subs and Funcs:
+    ☐ 101 Is the return of a function a Variant by default?
+    ☐ 105 Does a Function have to be called with parentheses to get the return value?
+    ☐ 107 Can a Function be called with parentheses but without a corresponding use of the return value?
+    ☐ 92 delcaring the parameters #content
+    ☐ 93 delcaring an optional parameter #content
+    ☐ 96 calling a sub or function #content
+    ☐ 98 add an example of a simple Sub and Function #content
+ 
