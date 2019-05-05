@@ -1,7 +1,6 @@
 ignore the ID numbers, they are from previous TODO list
 
 General:
-  ☐ 103 Build a tool to find common corrections
   134 Sections that need major attention:
     ☐ 135 Workbooks
     ☐ 136 Worksheets
@@ -32,7 +31,6 @@ General:
   ☐ 83 Update all of the TODOs to use more descriptive labels
 
 Ideas for content:
-  ☐ 16 Cheat sheet that shows the correspondence between keyboard shortcuts and VBA
   ☐ 40 Using the Workbook_Save event to compact data
   ☐ 42 Consider dividing the sections based on the main object?
   ☐ 44 Some comments on notation `Range()` vs. `Range`
@@ -94,3 +92,9 @@ Intro and Overview:
     ☐ 96 calling a sub or function #content
     ☐ 98 add an example of a simple Sub and Function #content
  
+
+Spell checking:
+  ☐ Create a tool that holds list of replacements (to -> from), store one per line
+  ☐ Use a spell check tool to find misspelled words
+  ☐ Keep track of common replacements so they can be automatically done again
+  ☐ Create a simple script to replace spelling errors across all files
