@@ -5,12 +5,12 @@
     "MD002": false,
     "MD041": false,
     "MD007": {
-      "indent": 4
+      "indent": 2
     }
   },
   "editor.tabSize": 4,
   "editor.insertSpaces": true,
-  "todo.embedded.provider": "ag",
+  "todo.embedded.provider": "javascript",
   "todo.embedded.regex": "(TODO):(.*)$",
   "todo.embedded.providers.ag.regex": "(TODO):(.*)$"
 }
