@@ -68,7 +68,7 @@ function splitConcatIntoSections() {
       var chapterName = res[1];
 
       var path =
-        "../newbook/" +
+        "../book/" +
         numeral(chapter).format("00") +
         "-" +
         cleanName(chapterName) +
