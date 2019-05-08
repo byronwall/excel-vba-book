@@ -1,4 +1,4 @@
-# overview of 0.5 basics of VBA
+# overview of basics of VBA
 
 section on VBA topics should include:
 

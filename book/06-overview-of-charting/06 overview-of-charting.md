@@ -1,4 +1,4 @@
-# overview of 3 charting
+# overview of charting
 
 Charting will be a major chapter in this book since it's the focus of a lot of what I do. It also is a spot where a significant amount of time can be saved since the chart options are awful to mess with.
 

@@ -1,4 +1,4 @@
-# overview of 2 values and formulas
+# overview of values and formulas
 
 Values and formulas will focus on what to do with a Range after you have it. This typically falls into a couple of categories:
 

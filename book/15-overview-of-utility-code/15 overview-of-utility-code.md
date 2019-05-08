@@ -1,4 +1,4 @@
-# overview of 11 utility code
+# overview of utility code
 
 This chapter might be a dumping ground for useful code that is worth being able to reference. Some things to include here:
 

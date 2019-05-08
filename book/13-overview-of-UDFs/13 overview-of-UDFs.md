@@ -1,4 +1,4 @@
-# overview of 9 UDFs
+# overview of UDFs
 
 This chapter could focus on a couple aspects of UDFs. High level topics:
 

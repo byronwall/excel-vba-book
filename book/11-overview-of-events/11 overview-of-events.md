@@ -1,4 +1,4 @@
-# overview of 4.5 events
+# overview of events
 
 chapter will focus on using events to interact with the user and also to drive more functional spreadsheets
 

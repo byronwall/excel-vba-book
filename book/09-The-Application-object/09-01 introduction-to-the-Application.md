@@ -4,10 +4,9 @@ This chapter will focus on the Application object. There are a number of signifi
 
 The major features of the Application object include:
 
-- Controlling the calcualtion
+- Controlling the calculation
 - Controlling events and other visual effects
-- Controling the StatusBar and providing feedback during a macro
-- Ability to execute arbitary formulas within VBA
+- Controlling the StatusBar and providing feedback during a macro
 
 TODO: any other items for this list?
 
