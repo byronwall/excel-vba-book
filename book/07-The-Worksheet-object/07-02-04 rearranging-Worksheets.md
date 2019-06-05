@@ -1,6 +1,6 @@
 ### rearranging Worksheets
 
-To rearrange the Worksheets, the command is simple: `Worksheet.Move(Before, After)`. The parametrs there will indicate the sheet ot place it before or after. The real task here is determining whcih sheet to refernece there, but finding that reference is the same task that is described up at the top of the seciton.
+To rearrange the Worksheets, the command is simple: `Worksheet.Move(Before, After)`. The parametrs there will indicate the sheet ot place it before or after. The real task here is determining which sheet to reference there, but finding that reference is the same task that is described up at the top of the seciton.
 
 #### AscendSheets.md
 

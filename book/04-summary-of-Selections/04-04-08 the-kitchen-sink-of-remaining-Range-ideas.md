@@ -36,10 +36,10 @@ The former ppint about needing to know the name is more often the problem. Somet
 
 When you are in a posiiton where you want to use the named ranges but do not know or want to use the actual names, you can go directly thrgouh the `Names` object. There are two ways to do this:
 
-- Iterate the `Names` with no knoweldge of them
+- Iterate the `Names` with no knowledge of them
 - Use an index, i.e. the `Name` and call into `Names(index)`
 
-Once you have access to a valid `Name`, you can then access the `RefersToRange` which will return a Range that cna be used. There are few instances where this is ever going to be better if you already have the name. The one exception to this is if you are wanting to change some of the metadata associated with the Name. This mainly includes the comment on the name since there is not much else. another otpion is that you can copy the named Range as a new range with a slightly different name. I have done this before to process all of the named ranges into some new named Rnage based on a fomrula which included the previous one. This cna be a critical step to improving the performance of arrya formulas that previosuly pointed to entire columns. The problem is that create the dynamically named ranges is an absolute pain without VBA.
+Once you have access to a valid `Name`, you can then access the `RefersToRange` which will return a Range that cna be used. There are few instances where this is ever going to be better if you already have the name. The one exception to this is if you are wanting to change some of the metadata associated with the Name. This mainly includes the comment on the name since there is not much else. another otpion is that you can copy the named Range as a new range with a slightly different name. I have done this before to process all of the named ranges into some new named Rnage based on a fomrula which included the previous one. This cna be a critical step to improving the performance of arrya formulas that previously pointed to entire columns. The problem is that create the dynamically named ranges is an absolute pain without VBA.
 
 TODO: add an example of the dynamic name creation
 
@@ -49,16 +49,16 @@ Once you are comfortable accessing named ranges, you may find that it is heplful
 
 One very useful technique for obtianing a Range is to ask the user for one. This is one of the fastest ways to level up your VBA game because it provides the user control while also making your VBA look pretty slick with the Range picker. The other upside here is that the InputBox Range picker generally works better than the RedEdit version on a form. The odd thing here is two-fold:
 
-- You have to know that InputBOx exists on teh Application alone. IF you use the other verison, then you cannot supply the Type
+- You have to know that InputBOx exists on the Application alone. IF you use the other version, then you cannot supply the Type
 - YOu have to know that Type:=8 allows for a Range selection
 
-ONce oyu have two those things down (because you read this book!) then you are able to ask teh user to pick a Range with ease. The other very nice thing about the InputBox approach is that you can supply a default address (not Range) and it will automatically be selected at the start. I have used this approach to get effect in bUTL to allow the VBA ot process the Selection (by default) or to allow the user to select somethign different. This is a very clean solution to sneivle defulats hwile also allowing the user to do somethign different once they read your initial prompt. It is also dead simple to upgrade your current `Set rng = Range()` to `Set rng = Applicaiton.InputBox("Select a cell", Type:=8)` instead. For utility tpye code, the difference in immense in terms of not having to hard code or guess Ranges. Or you can still guess them but provide the user a chance to change the guess.
+ONce oyu have two those things down (because you read this book!) then you are able to ask the user to pick a Range with ease. The other very nice thing about the InputBox approach is that you can supply a default address (not Range) and it will automatically be selected at the start. I have used this approach to get effect in bUTL to allow the VBA ot process the Selection (by default) or to allow the user to select something different. This is a very clean solution to sneivle defulats while also allowing the user to do something different once they read your initial prompt. It is also dead simple to upgrade your current `Set rng = Range()` to `Set rng = Applicaiton.InputBox("Select a cell", Type:=8)` instead. For utility tpye code, the difference in immense in terms of not having to hard code or guess Ranges. Or you can still guess them but provide the user a chance to change the guess.
 
-TODO: move that Funciton here form bUTL GetOrSelect...
+TODO: move that Function here form bUTL GetOrSelect...
 
 #### Using `Application.Index`
 
-The `=INDEX` formula is the most potent formula in Excel. Its couterpart in the VBA world is also powerful but less impressive compared to real programming. Having said that, the `Index` function works exactly as expected in VBA and is a very nice tool to have if you are comfortable using INDEX in a normal spreadsheet. The real power of Index is that you can use it to replace a lot of the common code where you iterate through a Range until you find given value. One potential upside of Index is that you can upgrade an Excel only methodology over to VBA with minial change to formulas. Once you have the work converted over, you can then set about addin teh details that VBA alone can provide.
+The `=INDEX` formula is the most potent formula in Excel. Its couterpart in the VBA world is also powerful but less impressive compared to real programming. Having said that, the `Index` function works exactly as expected in VBA and is a very nice tool to have if you are comfortable using INDEX in a normal spreadsheet. The real power of Index is that you can use it to replace a lot of the common code where you iterate through a Range until you find given value. One potential upside of Index is that you can upgrade an Excel only methodology over to VBA with minial change to formulas. Once you have the work converted over, you can then set about addin the details that VBA alone can provide.
 
 TODO: does this work any different than Cells? is it really that useful?
 
@@ -79,7 +79,7 @@ One of the next level things to do with VBA is to start processing your Formulas
 - You want to modify some part of the fomrula (e.g. take `A1` and surroudn it with an `ABS(A1)`)
 - You want to make all of the cells in a speciifc formula a specific color (like a permentant version of hitting `F2`)
 
-Whatever your motivation, it's good to rememebr that the formulas in a spreadsheet are generally the most important infomration aside from the actual data. IN some spreadsheets, the formulas are the only improtant part. If you want to extract and use htis informaiton, then it is helpful to be able to parse the formulas and identify the Rnages.
+Whatever your motivation, it's good to remember that the formulas in a spreadsheet are generally the most important infomration aside from the actual data. IN some spreadsheets, the formulas are the only improtant part. If you want to extract and use this informaiton, then it is helpful to be able to parse the formulas and identify the Rnages.
 
 There are a couple of approaches to parsing Ranges from formulas, depending on what you need to do and what you start with:
 
@@ -87,12 +87,12 @@ There are a couple of approaches to parsing Ranges from formulas, depending on w
 - Your formulas may contain a sheet name too
 - You want to extract non-range formula informatuon
 
-For the first two, you can build relatively simple parsers whcih can extract the Range infomraiton which good accuracy. The key here is to understand exactly what your formuals look like. The worst case is having to build a full out formulas parser which is a non-trvial exercise. Hadnling all possible Excel syntaxs is a mess.
+For the first two, you can build relatively simple parsers which can extract the Range infomraiton which good accuracy. The key here is to understand exactly what your formulas look like. The worst case is having to build a full out formulas parser which is a non-trvial exercise. Hadnling all possible Excel syntaxs is a mess.
 
-If you can settle for somethign less, then you have a couple of approaches at hand:
+If you can settle for something less, then you have a couple of approaches at hand:
 
 - Use a Regular Expression keyed in to Range options
-- Use your knoweldge of the possible formulas to extract the relevant parts iwth string funcitons
+- Use your knowledge of the possible formulas to extract the relevant parts with string functions
 
 TODO: add an example of some Regex which work here... expanding complexity
 

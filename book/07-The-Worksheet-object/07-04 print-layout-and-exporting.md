@@ -8,9 +8,9 @@ THis section will focus on the print and export related details of a Worksheet. 
 
 The details in this section can be a real time saver because one of the more tedious aspects of working with Excel is ensuring that your reports/graphs/data will print or export correctly. Being able to control these properties with VBA makes it possible to quickly apply the same formatting to a large number of Worksheets without having to click nine million times.
 
-When editing the Page Layout, you can change nearly everything. The one thing ot be aware of is related to printers. There are a number of settings in the Worksheet that are internally tied to the defualt (or active) printer. This shows up if you are attmepting to set the page size specifically. IF you always use the same printer or have coworkers who use the smae printers, you amy not notice these pissues. It becomes a serious probelm when you ar etrying ot make code work for multiple differnet printers that support or dientify page sizes differently.
+When editing the Page Layout, you can change nearly everything. The one thing ot be aware of is related to printers. There are a number of settings in the Worksheet that are internally tied to the default (or active) printer. This shows up if you are attempting to set the page size specifically. IF you always use the same printer or have coworkers who use the same printers, you amy not notice these pissues. It becomes a serious problem when you ar etrying ot make code work for multiple differnet printers that support or dientify page sizes differently.
 
-The best way to see what is savialable for page settings is to record a macro and change one thing. Excel is a bit agressive at including all possible settings that coudl ahve hcanged. This is very nice if you want to grab some setings nad work them into your code.
+The best way to see what is savialable for page settings is to record a macro and change one thing. Excel is a bit aggressive at including all possible settings that could have hcanged. This is very nice if you want to grab some setings nad work them into your code.
 
 There are a couple of other items to describe so you know what they are:
 

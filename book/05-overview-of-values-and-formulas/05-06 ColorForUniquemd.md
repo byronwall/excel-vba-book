@@ -22,7 +22,7 @@ Public Sub ColorForUnique()
     Dim rowToColor As Range
     For Each rowToColor In targetRange.Rows
 
-        'allow for a multi column key if intial range is multi-column
+        'allow for a multi column key if initial range is multi-column
         'TODO: consider making this another prompt... might (?) want to color multi range based on single column key
         Dim keyString As String
         If rowToColor.Columns.Count > 1 Then

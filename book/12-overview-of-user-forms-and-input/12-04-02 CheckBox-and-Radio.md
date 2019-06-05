@@ -4,8 +4,8 @@ The CheckBox and Radio are cousins (or siblings?) of each other and will be deal
 
 Aside from the Name, the main items to deal with are:
 
-- Clicked event - just double click ot get htis one
-- Value - note you get this by defualt usign the name, but it will include a Boolean of the selected state
+- Clicked event - just double click ot get this one
+- Value - note you get this by default usign the name, but it will include a Boolean of the selected state
 - Enabled - can be used to disable the control
 
 That's about it. You can change the formatting and other stuff, but these items typically exist to get an input and get to the real work. They are very common when you are providing options to the user or otherwise want to direct downstream If/Switch statements.

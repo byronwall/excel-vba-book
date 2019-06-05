@@ -1,6 +1,6 @@
 ### Application
 
-There are also a couple of events taht exist at the Application level. These include:
+There are also a couple of events that exist at the Application level. These include:
 
 - OnWait
 - TODO: any others?
