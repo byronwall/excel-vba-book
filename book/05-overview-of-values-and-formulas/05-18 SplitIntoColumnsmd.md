@@ -10,7 +10,7 @@ Public Sub SplitIntoColumns()
     Dim targetCell As Range
 
     Dim delimiter As String
-    delimiter = Application.InputBox("What is the delimeter?", , ",", vbOKCancel)
+    delimiter = Application.InputBox("What is the delimiter?", , ",", vbOKCancel)
     If delimiter = "" Or delimiter = "False" Then GoTo errHandler
     For Each targetCell In inputRange
 

@@ -13,4 +13,4 @@ If you are entering the debugger through an error, you simply hit `Debug` on the
 
 The other ways to enter the debugger are by hitting the CTRL+BREAK shortcut. If the VBA is at a stoppable point, this will cause an interrupt which gives the same prompt as the error prompt. From here, you can hit `Debug`.
 
-The final approach is to use the Step Into button on the code ot run. TODO: is this true?
+The final approach is to use the Step Into button on the code to run. TODO: is this true?

@@ -1,8 +1,8 @@
 ### GoTo staements
 
-`GoTo` statements are used ot force execution to jump to a speciifc Label regardless of anything else that the progrma is doing. A `GoTo` statement is required for error handling but is otherwise frowned upon by programmers with experience in other languages. The rpoblem is that a bad `GoTo` statement allows you to do much damage within a program because you can quickly corrupt your program state by jumping around. Also, other programming languages tend to include all fo the nice features that have replaced places where `GoTo` was prevously required. A good example of this is breaking out of a loop or skipping ot the next item in a loop. The latter is tpyically handled with a `continue` statement in other langugaes. In VBA, this statemnet does not exist and you are reuqired to use a `GoTo` if you want the functionality.
+`GoTo` statements are used to force execution to jump to a speciifc Label regardless of anything else that the progrma is doing. A `GoTo` statement is required for error handling but is otherwise frowned upon by programmers with experience in other languages. The rpoblem is that a bad `GoTo` statement allows you to do much damage within a program because you can quickly corrupt your program state by jumping around. Also, other programming languages tend to include all of the nice features that have replaced places where `GoTo` was previously required. A good example of this is breaking out of a loop or skipping to the next item in a loop. The latter is tpyically handled with a `continue` statement in other langugaes. In VBA, this statemnet does not exist and you are reuqired to use a `GoTo` if you want the functionality.
 
-To make a GoTo statement work, you need ot have a Label that the GoTo points to. An example looks like this:
+To make a GoTo statement work, you need to have a Label that the GoTo points to. An example looks like this:
 
 ```vb
 Sub GoToExample()

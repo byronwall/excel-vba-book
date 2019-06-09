@@ -1,6 +1,6 @@
 ### finding a `Range` while iterating through a `Range`
 
-One technique for working with Ranges is to start with one Range, iterate though it, can build a new Range based on some criteria. Alternatively, you may just act immdiatel on the Range as you are iterating through it. This approach is dead simple and is used in abudnance htoruhgout good workflows. As long as there is some meaninful logic which can be applied to identify whether or not a subset of a Range is interesting, you can use this tehcnque. SOme common logical stepst aht are chcked:
+One technique for working with Ranges is to start with one Range, iterate though it, can build a new Range based on some criteria. Alternatively, you may just act immdiatel on the Range as you are iterating through it. This approach is dead simple and is used in abudnance htoruhgout good workflows. As long as there is some meaningful logic which can be applied to identify whether or not a subset of a Range is interesting, you can use this tehcnque. SOme common logical stepst aht are chcked:
 
 - Check the `Value` of the cell
 - Check if the cell has some property (e.g. `HasFormula`, `HasArray`, etc.)

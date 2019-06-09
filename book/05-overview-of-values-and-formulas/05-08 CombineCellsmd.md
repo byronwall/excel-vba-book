@@ -9,7 +9,7 @@ Public Sub CombineCells()
     Set inputRange = GetInputOrSelection("Select the range of cells to combine")
 
     Dim delimiter As String
-    delimiter = Application.InputBox("Delimeter:")
+    delimiter = Application.InputBox("Delimiter:")
     If delimiter = "" Or delimiter = "False" Then GoTo delimiterError
 
     Dim outputRange As Range

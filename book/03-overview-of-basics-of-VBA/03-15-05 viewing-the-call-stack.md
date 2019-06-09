@@ -1,6 +1,6 @@
 ### viewing the call stack
 
-One final feature which is useful is to check the Call Stack. The Call Stack is a list of all the proceduring Subs or Functiojns that are "active" preceding the current command. It gives you a list of all the places that came before your current line of code. The Call Stack is invaluable when you have started debuggin following an erorr because oftentimes you will not know how you reached a given spot. This is epsecially true if you are debugging code that is used in multiple places.
+One final feature which is useful is to check the Call Stack. The Call Stack is a list of all the proceduring Subs or Functions that are "active" preceding the current command. It gives you a list of all the places that came before your current line of code. The Call Stack is invaluable when you have started debuggin following an error because oftentimes you will not know how you reached a given spot. This is epsecially true if you are debugging code that is used in multiple places.
 
 To see the Call Stack do View->Call Stack. You can then double click on an item and jump back to that spot. Note that the VBE will attempt to show you the vales of variables at that location which can be very helpful.
 

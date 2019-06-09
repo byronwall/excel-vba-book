@@ -35,7 +35,7 @@ Since the Selection can hold anything, it's important to know what could be Sele
 - ChartTitle
 - Series
 
-If you are writing VBA to work on Charts, you can technically require the user to select the correct part of the chart and always use `Selection`. You will quickly grow tired of having to remember which part of the Chart to select in order ot make the code work. To avoid this scenario, it is helpful to remember the object model and know how to work your way around a Chart.
+If you are writing VBA to work on Charts, you can technically require the user to select the correct part of the chart and always use `Selection`. You will quickly grow tired of having to remember which part of the Chart to select in order to make the code work. To avoid this scenario, it is helpful to remember the object model and know how to work your way around a Chart.
 
 My approach has always been to convert the Selection to a Collection of ChartObjects. I can then always iterate that resulting Collection to process the Charts. If only a single Chart was selected, the code works all the same. The downside to this approach is that a Chart as a Sheet cannot live inside a ChartObject. This is a large part of why I always put Charts on a Worksheet.
 
@@ -107,7 +107,7 @@ A typical workflow is included below since it is a pattern that shows up all the
   - Iterate through the Axes
   - Touch the other top level properties including ChartTile, Legend, etc.
 
-This workflow is quite powerful because it can quickly be wrapped with a loop to go through all Worksheets and even possible all Workbooks. It's also powerful because you can be quite comfortable learning this pattern and then adding in the parts that you actually want ot change. The only downside is that it can be quite tedious to type out all the loops every time, but there's not a good way around that other than to use the clipboard.
+This workflow is quite powerful because it can quickly be wrapped with a loop to go through all Worksheets and even possible all Workbooks. It's also powerful because you can be quite comfortable learning this pattern and then adding in the parts that you actually want to change. The only downside is that it can be quite tedious to type out all the loops every time, but there's not a good way around that other than to use the clipboard.
 
 Another approach to using ChartObjects is to not iterate through all of them but instead to select a single ChartObject and work with it. There are two ways to do this:
 
@@ -120,7 +120,7 @@ Although `For Each` loops are generally preferred when working with Charts, some
 
 #### Workbook.Sheets to get Chart references
 
-The final approach to obtaining a Chart reference is to use the Sheets object. Aside from ActiveChart, this is the only way to deal with Charts that are their own Sheet. Again, you cna either use an index or a Name. Here, the Name is easily changed on the Sheet tab so it's much more common to use a Name when doing this. The other approach is to iterate through all the Sheets and pick off the ones that are Charts.
+The final approach to obtaining a Chart reference is to use the Sheets object. Aside from ActiveChart, this is the only way to deal with Charts that are their own Sheet. Again, you can either use an index or a Name. Here, the Name is easily changed on the Sheet tab so it's much more common to use a Name when doing this. The other approach is to iterate through all the Sheets and pick off the ones that are Charts.
 
 There are two key points when working with Charts as Sheets:
 

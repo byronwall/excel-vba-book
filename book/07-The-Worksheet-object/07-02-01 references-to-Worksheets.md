@@ -25,7 +25,7 @@ In some of those instances, you are working with multiple sheets because you wan
 It is worth mentioning that every Workbook has built in dedicated references to the Worksheets which can be used. These exist as a part of the Object Model. By default they are called `Sheet1`, `Sheet2`, etc. These objects are always available and provide a direct reference to the worksheet. They can be quite helpful if you rename them from the default names. A couple of important items about these objects:
 
 - They only exist as objects in the current Workbook. That is, if you want to access a Worksheet in another Workbook, this approach will not work. You can technically add a reference to the other Workbook, but I don't recommend doing that.
-- Their naming is independent of the actual sheet name displayed in Excel. This cna be incredibly confusing for a new developer (especially if they are not using `Option Explicit`).
+- Their naming is independent of the actual sheet name displayed in Excel. This can be incredibly confusing for a new developer (especially if they are not using `Option Explicit`).
 - It is very difficult to use these objects to perform some action to multiple Worksheets.
 
 For what it's worth, I've never used the objects directly. I find myself using the sheet name directly when needed. This leads to issues with the name being changed, but at some point searching for the string in code is easier than trying to rename the object in the VBE sidebar. All of the references will break either way.

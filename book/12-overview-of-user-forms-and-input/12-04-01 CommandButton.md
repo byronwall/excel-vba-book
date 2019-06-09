@@ -8,6 +8,6 @@ Other properties of the button that might be used:
 
 - Value - will change the text that is displayed (TODO: is this right?)
 - Enabled - will change wheteher the button can be pressed and will change the visuals. Useful when you want to show that an option could be possible but is not currently allowed or enabeld
-- Formatting and other visuals - you may change this on the proeprty editor but it is far less common to modify the fomratting once you are running. It can be done but is not common.
+- Formatting and other visuals - you may change this on the property editor but it is far less common to modify the fomratting once you are running. It can be done but is not common.
 
 That's it; buttons are simple.

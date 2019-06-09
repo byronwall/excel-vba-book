@@ -19,4 +19,4 @@ Some of the useful properties of a Worksheet include:
   - Comments?
 - TODO: add others
 
-TODO: determine how ot explain these and which to include
+TODO: determine how to explain these and which to include

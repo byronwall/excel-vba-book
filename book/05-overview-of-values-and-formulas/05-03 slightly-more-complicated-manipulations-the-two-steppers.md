@@ -1,6 +1,6 @@
 ## slightly more complicated manipulations (the two steppers)
 
-This section will on the so called "two steppers". I call them that because these manipulations typically involve two commands after identifying a `Range`. the first command is usually a logic or loop, and the second command is the actual work ot be done. Two steppers are important because a large number of complicated tasks involve nesting and combining these two steps.
+This section will on the so called "two steppers". I call them that because these manipulations typically involve two commands after identifying a `Range`. the first command is usually a logic or loop, and the second command is the actual work to be done. Two steppers are important because a large number of complicated tasks involve nesting and combining these two steps.
 
 Some examples of two step manipulations includes;
 

@@ -1,15 +1,15 @@
 ### Disabling calculations
 
-The most common approach to controllign calculatiojns is to simply disable them. To "dsiable" the calculations, is really to set the CalculationMode to Manual. It does not actually disable calculations, but instead it prevents the automatic calculations updates from firing like normal. The spreadsheet still maintains its normal model of calculations; they just don't run. This is an incredibly common approach to speeding up the perofmrance of VBA code. The performance boost results form the fact that when VBA code executes, it is very tihglty coupled to the normal Excel operaitons that take place. When you use VBA to set a `.Value` equal to some new value, it is functioanlyl equivlabet to manually entering the value. Behind the scenes, Excel will fire off the normal Change events and update the dependent cells. THis can become a bottleneck because VBA is able to rapidly fire off `.Value` changes. So rapidly, that processing all of the associated stuff can become a limitation. It is more or less guaranteed that you will run into this issue once you start writing VBA code. It is so common, that you will likely memorize the fix:
+The most common approach to controllign calculatiojns is to simply disable them. To "disable" the calculations, is really to set the CalculationMode to Manual. It does not actually disable calculations, but instead it prevents the automatic calculations updates from firing like normal. The spreadsheet still maintains its normal model of calculations; they just don't run. This is an incredibly common approach to speeding up the perofmrance of VBA code. The performance boost results form the fact that when VBA code executes, it is very tihglty coupled to the normal Excel operaitons that take place. When you use VBA to set a `.Value` equal to some new value, it is functioanlyl equivlabet to manually entering the value. Behind the scenes, Excel will fire off the normal Change events and update the dependent cells. THis can become a bottleneck because VBA is able to rapidly fire off `.Value` changes. So rapidly, that processing all of the associated stuff can become a limitation. It is more or less guaranteed that you will run into this issue once you start writing VBA code. It is so common, that you will likely memorize the fix:
 
 TODO: check this code
 
 ```vba
 Application.CalculationMode = xlManual
 Application.ScreenUpdating = False
-Applicaiton.EnabledEvents = False
+Application.EnabledEvents = False
 
-Applicaiton.EnabledEvents = True
+Application.EnabledEvents = True
 Application.ScreenUpdating = True
 Application.CalculationMode = xlAutomatic
 ```
@@ -23,9 +23,9 @@ What happens when you disable calcualtiojns? THis is the key concept to understa
 - Less important items:
   - Conditional formatting will not update.
 
-So why might those things matter? The biggest reason is that if your VBA code depends on the state of the spreadsheets, then you are likely depending on calculations at some point. This menas that you need ot split you rcode into semgents where you are not worried about cell values and those wehre you are. An example:
+So why might those things matter? The biggest reason is that if your VBA code depends on the state of the spreadsheets, then you are likely depending on calculations at some point. This means that you need to split you rcode into semgents where you are not worried about cell values and those wehre you are. An example:
 
-You are building a tool to process data from a CSV file. You have been told that you should delete data that is in the 0th to 10th percentile of a cost column. Unforateunyl, the data needs to be preprocessed in order to create an accurate cost column. Your CSV file contains a mess of extra text and ohter issues when need to be removed. Your workflow then is:
+You are building a tool to process data from a CSV file. You have been told that you should delete data that is in the 0th to 10th percentile of a cost column. Unforateunyl, the data needs to be preprocessed in order to create an accurate cost column. Your CSV file contains a mess of extra text and other issues when need to be removed. Your workflow then is:
 
 1. Import the CSV data
 2. Preprocess the cost column to clean up the mess
@@ -41,7 +41,7 @@ Next
 
 If `rngData` contains 90,000 cells, then your update code will call for at least 90,000 full Worksheet recalculations. Even worse, your PERCENTILE fomrula requires the entire colujmn of data and so all cells have to update every time. `90,000 x 90,000` quickly becomes a problem.
 
-So, why is the PERCENTILE function updating after every change? Do we really care what hte intermediate values are? No.
+So, why is the PERCENTILE function updating after every change? Do we really care what the intermediate values are? No.
 
 This is why you want to have control of the calculations. in this case, you kknow that the processing code is not affected by the value of the PERCENTILE column. We only need the static data available in order to complete the processing. The fix here is to turn calcuaitliosn to manual during the processing step so that you do not incur 90,000 extra recalculations.
 
@@ -50,6 +50,6 @@ Once the processing is done, what do we do with the calculatiojn mode? Well, tha
 - Turn on an `AutoFilter` and do a FILTER-DELETE to remove all the rows in one shot.
 - Iterate through the rows, one by one, and remove those which are in the 10th or lower percentils
 
-Looks like either will work, but hwo does calculatiojn mode affect things? Well, if you go with the latter option, you will find that your PERCENTILES will update after each deletion. This is not hte behavior you intended. You somehow want to remember the PERCENTILE value before oyu started the deletions. The solution then is to contorl the calculation mode again. Here, we are controllign things for **accuracy**. Our deletiojn appraihc will not work if we allow cells to update as we go.
+Looks like either will work, but hwo does calculatiojn mode affect things? Well, if you go with the latter option, you will find that your PERCENTILES will update after each deletion. This is not the behavior you intended. You somehow want to remember the PERCENTILE value before oyu started the deletions. The solution then is to contorl the calculation mode again. Here, we are controllign things for **accuracy**. Our deletiojn appraihc will not work if we allow cells to update as we go.
 
 Pro tip: if you are deleting cells, you should pretty much never go a row, column, or cell at a time. Instead you should build a `Range` of cells to be deleted using `Union` and delete them in one shot using `Delete`. This approach is called a `UNION-DELETE` and avoids all of the issues described above. It's also the fatest approach since it does a single deletion.

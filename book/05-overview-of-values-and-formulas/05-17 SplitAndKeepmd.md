@@ -13,7 +13,7 @@ Public Sub SplitAndKeep()
     End If
 
     Dim delimiter As Variant
-    delimiter = InputBox("What delimeter to split on?")
+    delimiter = InputBox("What delimiter to split on?")
     'StrPtr is undocumented, perhaps add documentation or change function
     If StrPtr(delimiter) = 0 Then
         Exit Sub

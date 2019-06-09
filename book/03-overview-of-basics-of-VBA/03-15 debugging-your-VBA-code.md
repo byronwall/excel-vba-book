@@ -5,5 +5,5 @@ One of the most useful features of VBA and the VBE is the ability to debug your 
 - Stepping through execution and watching the movement of values into and out of variables
 - Using the Immediate Window to execute arbitrary code or output the results of some value
 - Setting the next instruction to force VBA to jump to an arbitrary point in your code
-- Viewing the call stack ot see how you reached a given spot
+- Viewing the call stack to see how you reached a given spot
 - Breaknig at an arbitrary breakpoint or after an error was thrown
