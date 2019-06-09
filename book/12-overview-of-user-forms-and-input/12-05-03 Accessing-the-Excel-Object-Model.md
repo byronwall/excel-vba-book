@@ -4,6 +4,6 @@ From a UserForm, you have full access to the Excel Object Model. This can be ver
 
 There is no real limit to what you can do from a SuerForm. A couple of examples to give you a feel:
 
-- present a list of all open Workbooks so that they user can sleect which one that want to process
+- present a list of all open Workbooks so that they user can select which one that want to process
 - Create a form that can process all of the selected CHarts.
 - Present a ListBox with the unique values from all of the AutoFilters that are active. Allow the user to selectively remove or chagne those filters without having to use the normal drop downs.

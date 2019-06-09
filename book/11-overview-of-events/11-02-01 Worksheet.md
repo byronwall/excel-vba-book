@@ -21,4 +21,4 @@ For some examples here, I will show you how to do the goal seek business along w
 
 TODO: add the code and description for the Goal Seek event
 
-TODO: add the code nad desc for some event which activates on Sleect
+TODO: add the code nad desc for some event which activates on Select
