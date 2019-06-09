@@ -21,7 +21,7 @@ The second way you can deal with these error prompts is by hitting `Debug`. This
 
 - Locals window, which will provide an overiview of all the local variables and their current state
 - Set next statement, which will allow you to skip over an error or rerun a line of code whose state may have changed between executions
-- Immediate window, which will allow you to either run arbitrary commands or possinly output infomration about the program state.
+- Immediate window, which will allow you to either run arbitrary commands or possinly output information about the program state.
 
 All of htose tools combined should make it possible for you to determine the source of an error. Once you have determine the source of an error, you can then set about resolving the rror, again using the debug tools. Once you have solved the problem, you should give serious ocnsideration to then adding that solutiojn to the code using proper error handling technqes. Again, it is absolutely awful to present the user with an error dialog and epxect them to be able to ifgure it out. Even if you are the user, you will absolutely tire of dealing with error prompts that can be handled with proper handling.
 
@@ -50,7 +50,7 @@ For a lot of arrays and other iterable objects, you have different approaches fo
 
 #### Application.XXX functions
 
-In some instances, it is possible to trade a runtime error for a return value that has a tpye of error. This occurs with the Application.XXX functions where XXX includes items in the list:
+In some instances, it is possible to trade a runtime error for a return value that has a type of error. This occurs with the Application.XXX functions where XXX includes items in the list:
 
 - Match
 - TODO: any others?
@@ -61,7 +61,7 @@ THis can be benficial because when the functojn returns an error, you can then t
 
 TODO: add section about 1004
 
-TODO: add infomration about ocmpile time errors vs. run time errors.
+TODO: add information about ocmpile time errors vs. run time errors.
 
 #### common Excel errors
 

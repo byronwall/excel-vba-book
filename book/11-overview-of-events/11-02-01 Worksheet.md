@@ -6,7 +6,7 @@ THe Worksheet hsa a number of events which are commonly used. These include:
 - SelectionChanged
 - Activate
 
-These events roughly correspond to their name and are easy enough to handle. The idea with these is that you have a specific cworksheet that you want to monitor for a speciifc event. In that case, you add the event using the VBE and then add the handling code.
+These events roughly correspond to their name and are easy enough to handle. The idea with these is that you have a specific cworksheet that you want to monitor for a specific event. In that case, you add the event using the VBE and then add the handling code.
 
 The most common approaches for using these events is to trakc what the user is doing and then provide some adidtioanl functionality based on their actions. There are a number of reasons that you might want to respond to their input:
 

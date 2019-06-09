@@ -5,7 +5,7 @@ To enter the debugger, you need to eitehr set a breakpoint, hit Step Into, hit t
 When setting a breakpoint, tehre are a handful of reasons for choosing where to set one:
 
 - Right before an important step so that oyu can see the before and after state
-- Inside of a control structure so that you can see whether or executiojn enters that structure. Sometimes there is infomration to be had when the code does _not_ reach a breakpoint.
+- Inside of a control structure so that you can see whether or executiojn enters that structure. Sometimes there is information to be had when the code does _not_ reach a breakpoint.
 
 When breakpoints, you can technically disable them instead of removing them if you do not want them to tirgger. I never use that feature.
 

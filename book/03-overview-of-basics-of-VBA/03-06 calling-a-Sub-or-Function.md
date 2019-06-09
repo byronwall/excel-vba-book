@@ -6,7 +6,7 @@ WHen calling a Function, you have the same approaches available. You can just us
 
 ONe thing to be aware of with Functions is how to properly handle the return from the functiojn (assuming it actually returns something). This is where VBA gets a bit weird. THe rules here split on whether the Functiojn returns an Object or Value type.
 
-For either type, you are reuiqred to call the Functiojn iwht parenthesesis. This signals to VBA: please retain and use the return of this Functiojn. For a reference tpye, you will need to use `Set` as required. For a value type, you will omit `Set`. See the code example below.
+For either type, you are reuiqred to call the Functiojn iwht parenthesesis. This signals to VBA: please retain and use the return of this Functiojn. For a reference type, you will need to use `Set` as required. For a value type, you will omit `Set`. See the code example below.
 
 If you ever get the compile time error `Object reference not set` this means that you have not used a `Set` somewhere that is required. A good place to check are spots where you are using the return from a function. The same thing happens if you omit the parentheses. (TODO: is this right?)
 

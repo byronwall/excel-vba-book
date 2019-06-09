@@ -5,7 +5,7 @@ User Input on a User Form is one of the most critical aspects ofm aking them. IT
 - TextBox: Works great when you want to control a single value from the user. You can then parse the string into a number or whatever else oyu need
 - ListBox.: Works great for allowing the user to select form a list from still beign able to see multiple items in the list. Also uspports multiple seleciton
 - COmboBox: Same as ListBox but the contorl collapses to a single line when you are not selecting items. Does not allow for multiple selection.
-- CheckBox or RadioButton: Allow the user to make a sleection between choices while seeing the choiecs
+- CheckBox or RadioButton: Allow the user to make a selection between choices while seeing the choiecs
 - Button: Really allows a user to unput a single click
 - RefEdit: Not recommended but it allows you to select a Range from the Spreadsheet.
 - TODO: any others (number bumper?)

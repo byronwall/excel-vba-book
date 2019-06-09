@@ -39,7 +39,7 @@ For Each rngCell in rngData
 Next
 ```
 
-If `rngData` contains 90,000 cells, then your update code will call for at least 90,000 full Worksheet recalculations. Even worse, your PERCENTILE fomrula requires the entire colujmn of data and so all cells have to update every time. `90,000 x 90,000` quickly becomes a problem.
+If `rngData` contains 90,000 cells, then your update code will call for at least 90,000 full Worksheet recalculations. Even worse, your PERCENTILE formula requires the entire colujmn of data and so all cells have to update every time. `90,000 x 90,000` quickly becomes a problem.
 
 So, why is the PERCENTILE function updating after every change? Do we really care what the intermediate values are? No.
 

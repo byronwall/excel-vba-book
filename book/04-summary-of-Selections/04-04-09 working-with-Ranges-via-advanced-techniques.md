@@ -14,7 +14,7 @@ Intersect used in this fashion is incredibly pwoerful. You can do all sorts of w
 
 #### AutoFilter and then SpecialCells
 
-This approach is straight forward and mirrors a cmomon operation in non VBA Excel. You use an AutoFilter to filter out specific cells and tehn you can select only the visible cells. In Excel, you can use `ALT+SEMICOLON` to only select visible cells. Often times, you will not need to actually do this since Excel tries to help you when dealing with Hidden rows and colujmns. Tpyically Excel will not apply formatting to hidden cells and will also not fill a fomrula through them (assuming you used the Fill command).
+This approach is straight forward and mirrors a cmomon operation in non VBA Excel. You use an AutoFilter to filter out specific cells and tehn you can select only the visible cells. In Excel, you can use `ALT+SEMICOLON` to only select visible cells. Often times, you will not need to actually do this since Excel tries to help you when dealing with Hidden rows and colujmns. Tpyically Excel will not apply formatting to hidden cells and will also not fill a formula through them (assuming you used the Fill command).
 
 In VBA, things are often more difficult because you are working with the underlying Range indepednet of whether or not the cells are hidden. To get around this, Excel provides the SpecialCells function which allows you to select a subset of cells based on some crtieria. when using the AutoFilter, the most common criteriojn to use is that of visibilty. You can call `Range.SpecialCells(xlCellTypeVisisble)` to obtain a new Range which only coantians visible cells.
 
