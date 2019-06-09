@@ -14,4 +14,4 @@ Application.ScreenUpdating = True
 Application.CalculationMode = xlAutomatic
 ```
 
-What does that code do? Again, it forces calculatiojn to manual mode, the screen to not update, and events to not fire.
+What does that code do? Again, it forces calculation to manual mode, the screen to not update, and events to not fire.

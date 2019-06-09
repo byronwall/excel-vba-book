@@ -7,7 +7,7 @@ When you are creating macro workflows, there are a number of tools at your dispo
 - Usability. There are some situations where you are interacting with calculations and need to prevent the normal behavior. The most common is when you add Workbook events like `Change`.
 - Profiling. If you are building a code profiler (i.e. a tool that tracks execution time of your code) you must control calculations in order to get the tracking right.
 
-We'll get back to the applciations, but it's also worht hittin gthe high points on how you can control the calculatiojn. THe main knobs:
+We'll get back to the applciations, but it's also worht hittin gthe high points on how you can control the calculation. THe main knobs:
 
 - Disable application wide
 - Disable for a Worksheet
