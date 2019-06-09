@@ -32,7 +32,7 @@ The dual loop approach is worth mentionign further since sometimes it can give y
 - Use one loop to create a collection that stores the rows to be deleted and then iterate that collection in a new loop
 - Build a larger Range to delete as you go and then use an Excel function to handle the actual deletion
 
-The latter option is only technically a "dual" loop. Tehcnically Excel will use some sort of internal loop to actually delete the Range. You are only required to cleverly create the Range which allows this internal process to be kicked off.
+The latter option is only technically a "dual" loop. Technically Excel will use some sort of internal loop to actually delete the Range. You are only required to cleverly create the Range which allows this internal process to be kicked off.
 
 TODO: add an example of the Collection approahc for deleting Ranges
 

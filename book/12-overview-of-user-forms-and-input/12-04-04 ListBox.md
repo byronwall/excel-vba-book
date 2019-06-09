@@ -12,7 +12,7 @@ To put items into the ListBox, you need to modify the List collection on the obj
 - Directly, via the List boject
 - Indirectly, using the `AddItem` command
 
-Either way you go, you have a couple of decisions after adding the item: what text do you want displayed for the item and do you want multiple columns? If you are dealing with a singel column, then you can simply add the text in the call for an addition and that's all. IF you are working with columns, then you will need to do two things:
+Either way you go, you have a couple of decisions after adding the item: what text do you want displayed for the item and do you want multiple columns? If you are dealing with a single column, then you can simply add the text in the call for an addition and that's all. IF you are working with columns, then you will need to do two things:
 
 - Set up the columns (using the editor or via commands) (TODO: add pictures or code here)
 - Call the command to set the fields using the row and column nujmber (TODO: add some code)
@@ -24,7 +24,7 @@ ALthough I have described a simple process here, oftentimes, you will deal with 
 - Use some other object or Collection that can reference the object back to the string
 - Serialize the object into the ListBox value (if multiple fields, join with a `|` or similar)
 
-Each of those approaches has its pros and cons, btu the main idea is that you are often forced to deal with something that is typically much easier in other languages. My general approach is to rely on row index if I know that changes are not possible. This is common for a lot of code isnce yout ar elikely to contorl both side. If that is not ideal, then you can typucally find some way to store a reference ebetween the display value and the object using a Dictionary.
+Each of those approaches has its pros and cons, btu the main idea is that you are often forced to deal with something that is typically much easier in other languages. My general approach is to rely on row index if I know that changes are not possible. This is common for a lot of code isnce yout ar elikely to control both side. If that is not ideal, then you can typucally find some way to store a reference ebetween the display value and the object using a Dictionary.
 
 Once you hav eth einfomration in the ListBox, you can simply iterate the `Items` by index nad check the `Selected(index)` property to see if the item is sleected. Note that if you do not allow multiple selection, then you can also use the `SelectediNdex` property (TODO: is that right?).
 

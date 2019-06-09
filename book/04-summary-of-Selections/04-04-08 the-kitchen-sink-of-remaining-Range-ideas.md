@@ -43,7 +43,7 @@ Once you have access to a valid `Name`, you can then access the `RefersToRange` 
 
 TODO: add an example of the dynamic name creation
 
-Once you are comfortable accessing named ranges, you may find that it is heplful to create them from time to time from VBA. This can be a helpful way of storing a complicated Range that your VBA created without having to select the cells and hope you can type the name correctly.
+Once you are comfortable accessing named ranges, you may find that it is helpful to create them from time to time from VBA. This can be a helpful way of storing a complicated Range that your VBA created without having to select the cells and hope you can type the name correctly.
 
 #### Using `Application.InputBox(, Type:=8)`
 
