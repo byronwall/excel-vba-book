@@ -3,7 +3,7 @@
 ```vb
 Public Sub CombineAllSheetsData()
 
-    'create the new wkbk and sheet
+    'create the new wktk and sheet
     Dim targetWorkbook As Workbook
     Dim sourceWorkbook As Workbook
 

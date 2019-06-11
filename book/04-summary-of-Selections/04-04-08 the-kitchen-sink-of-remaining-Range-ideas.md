@@ -52,7 +52,7 @@ One very useful technique for obtaining a Range is to ask the user for one. This
 - You have to know that InputBOx exists on the Application alone. IF you use the other version, then you cannot supply the Type
 - YOu have to know that Type:=8 allows for a Range selection
 
-ONce oyu have two those things down (because you read this book!) then you are able to ask the user to pick a Range with ease. The other very nice thing about the InputBox approach is that you can supply a default address (not Range) and it will automatically be selected at the start. I have used this approach to get effect in bUTL to allow the VBA to process the Selection (by default) or to allow the user to select something different. This is a very clean solution to sneivle defaults while also allowing the user to do something different once they read your initial prompt. It is also dead simple to upgrade your current `Set rng = Range()` to `Set rng = Application.InputBox("Select a cell", Type:=8)` instead. For utility type code, the difference in immense in terms of not having to hard code or guess Ranges. Or you can still guess them but provide the user a chance to change the guess.
+ONce you have two those things down (because you read this book!) then you are able to ask the user to pick a Range with ease. The other very nice thing about the InputBox approach is that you can supply a default address (not Range) and it will automatically be selected at the start. I have used this approach to get effect in bUTL to allow the VBA to process the Selection (by default) or to allow the user to select something different. This is a very clean solution to snivel defaults while also allowing the user to do something different once they read your initial prompt. It is also dead simple to upgrade your current `Set rng = Range()` to `Set rng = Application.InputBox("Select a cell", Type:=8)` instead. For utility type code, the difference in immense in terms of not having to hard code or guess Ranges. Or you can still guess them but provide the user a chance to change the guess.
 
 TODO: move that Function here form bUTL GetOrSelect...
 
@@ -87,7 +87,7 @@ There are a couple of approaches to parsing Ranges from formulas, depending on w
 - Your formulas may contain a sheet name too
 - You want to extract non-range formula information
 
-For the first two, you can build relatively simple parsers which can extract the Range information which good accuracy. The key here is to understand exactly what your formulas look like. The worst case is having to build a full out formulas parser which is a non-trivial exercise. Hadnling all possible Excel syntaxs is a mess.
+For the first two, you can build relatively simple parsers which can extract the Range information which good accuracy. The key here is to understand exactly what your formulas look like. The worst case is having to build a full out formulas parser which is a non-trivial exercise. Handling all possible Excel syntaxs is a mess.
 
 If you can settle for something less, then you have a couple of approaches at hand:
 

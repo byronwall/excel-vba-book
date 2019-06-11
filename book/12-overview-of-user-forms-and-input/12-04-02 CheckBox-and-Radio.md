@@ -1,6 +1,6 @@
 ### CheckBox and Radio
 
-The CheckBox and Radio are cousins (or siblings?) of each other and will be dealt with at once. They allow for a Boolean selection of an option. For the Checkbox, you are allowed to indicate the on/off state of a given button. For a Radio, you are allowed to indicate the on/off state for a single option _within a group of options_. The main thing to note about the Radio is that by selecting one item, you will uneslect the others. In this way, the uses of these two controls maps naturally to the tasks you are likely to see.
+The CheckBox and Radio are cousins (or siblings?) of each other and will be dealt with at once. They allow for a Boolean selection of an option. For the Checkbox, you are allowed to indicate the on/off state of a given button. For a Radio, you are allowed to indicate the on/off state for a single option _within a group of options_. The main thing to note about the Radio is that by selecting one item, you will deselect the others. In this way, the uses of these two controls maps naturally to the tasks you are likely to see.
 
 Aside from the Name, the main items to deal with are:
 

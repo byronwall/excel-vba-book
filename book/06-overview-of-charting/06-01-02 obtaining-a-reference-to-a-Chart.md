@@ -23,7 +23,7 @@ The nice thing about ActiveChart is that it gives you the Chart object which the
 
 #### `Selection`
 
-The Selection object is probably the greatest catch all for an object. It literally holds anything, and this means that using the object requires knowing what is selected, or checking vigorously before using the object. Technically, you also let your code error out if the wrong object is selected, and this works well at times. This works well because oyu are unlikely to be using Selection in a complicated workflow because, again, you should not be selecting objects to access them. This means that Selection is really limited to one-off and helper code where you can more tightly dictate that this code only works if you select a Chart. You should still add some error handling, but sometimes that step is skipped.
+The Selection object is probably the greatest catch all for an object. It literally holds anything, and this means that using the object requires knowing what is selected, or checking vigorously before using the object. Technically, you also let your code error out if the wrong object is selected, and this works well at times. This works well because you are unlikely to be using Selection in a complicated workflow because, again, you should not be selecting objects to access them. This means that Selection is really limited to one-off and helper code where you can more tightly dictate that this code only works if you select a Chart. You should still add some error handling, but sometimes that step is skipped.
 
 Since the Selection can hold anything, it's important to know what could be Selected. Related to charts, the following can all live in the Selection:
 

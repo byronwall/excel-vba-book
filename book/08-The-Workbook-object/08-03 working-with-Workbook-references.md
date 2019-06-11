@@ -15,4 +15,4 @@ For Workbooks, the biggest thing to be aware of that there are a number of unqua
 - Worksheets and Sheets
 - Names?
 
-These unqualified referecnes can really bite you when you are expecting it. The problem with unqalified references is that they work great initially, before the workflow becomes complex. They will then silently fail later when you start creating new Workbooks and otherwise changing the focus or active Workbook. The problem is that nearly all of the unqualified references apply to the ActiveWorkbook. Working with Workbooks is the one task that will often change the focus of Excel regardless of how you create things.
+These unqualified references can really bite you when you are expecting it. The problem with unqualified references is that they work great initially, before the workflow becomes complex. They will then silently fail later when you start creating new Workbooks and otherwise changing the focus or active Workbook. The problem is that nearly all of the unqualified references apply to the ActiveWorkbook. Working with Workbooks is the one task that will often change the focus of Excel regardless of how you create things.

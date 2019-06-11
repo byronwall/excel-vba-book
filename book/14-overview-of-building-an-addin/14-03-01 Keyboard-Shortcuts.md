@@ -2,7 +2,7 @@
 
 The simplest thing to do is to add keyboard shortcuts to your addin. There are two ways to do that:
 
-- Open up the Macros form on the Developer tab. You can then hit "options" for a given Sub and assign a keyabord shortcut (TODO: add picture of this)
+- Open up the Macros form on the Developer tab. You can then hit "options" for a given Sub and assign a keyboard shortcut (TODO: add picture of this)
 - That approach can sometimes be a pain to edit later, so you can also add code to your addin to add the shortcut.
 
 The latter approach is nice because you can easily change the shortcut or the calling method. For addins, I will nearly always take the latter approach since it is much easier to deal with alter. For XLSM workbooks, I will do the former since it is easier to change from a workbook.

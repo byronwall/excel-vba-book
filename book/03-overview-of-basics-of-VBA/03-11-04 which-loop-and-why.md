@@ -4,7 +4,7 @@ There are a handful of common reasons you might go for one loop instead of anoth
 
 A couple of good things to remember:
 
-If you are going to modify a collection in the course of iterating through it, you should not use a For Each loop. The For Each does not update the iterable collection if you modify it during a loop. This is particularly important if you are looping through a collection to identify items to delete from the collection. You should never do this in a For Each loop. When deleting, you should typically use a For loop and iterate through the collection in reverse order. This makes it easy to handle deleting items since you cannot get out of order. You can achieve the same result with a Do/While, but I won't cover that.
+If you are going to modify a collection in the course of iterating through it, you should not use a For Each loop. The For Each does not update the utterable collection if you modify it during a loop. This is particularly important if you are looping through a collection to identify items to delete from the collection. You should never do this in a For Each loop. When deleting, you should typically use a For loop and iterate through the collection in reverse order. This makes it easy to handle deleting items since you cannot get out of order. You can achieve the same result with a Do/While, but I won't cover that.
 
 TODO: add an example of deleting via a For loop
 
