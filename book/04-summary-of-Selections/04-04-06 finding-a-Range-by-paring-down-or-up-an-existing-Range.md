@@ -24,8 +24,8 @@ There are two simple ways to "move" from a given `Range` to a new `Range`, namel
   - This is often paired with a `While` loop to work down a `Range`
   - This is also helpful when you are not exactly sure what `Range` you want (maybe it's dependent on cell values) so you can't simply assign the correct multi-cell `Range` at the start.
 - Use an existing `Range` to get the starting point for a `Range` and move over to a neighbor cell or a blank area to do something
-  - THis is common when using one cell's value to determine the value of the next one (e.g. splitting on a delimiter)
-  - THis is also common when adding formulas to a spreadsheet. Find the current data, `Offset()` over a column and apply the formula to all cells. \* Also helpful when you "just know" that a desired `Range` is some distance away from the `Range` you've got. This is not the most elegant code at times (since it breaks easily), but it works reliably when you control the spreadsheet.
+  - This is common when using one cell's value to determine the value of the next one (e.g. splitting on a delimiter)
+  - This is also common when adding formulas to a spreadsheet. Find the current data, `Offset()` over a column and apply the formula to all cells. \* Also helpful when you "just know" that a desired `Range` is some distance away from the `Range` you've got. This is not the most elegant code at times (since it breaks easily), but it works reliably when you control the spreadsheet.
 
 TODO: add a while loop example
 
@@ -45,7 +45,7 @@ There are a few common patterns when working with `End()`:
 
 - Use a `Range` that you know is at the top of a block of data and use `End(xlDown)` to get to the bottom of the column.
   - This can be combined with `Range(Range, Range)` to get the full multi-cell `Range` to work through
-  - THis technique is very powerful when redefining the `Ranges` of a chart to include all of the cells (this can also be used for formulas too).
+  - This technique is very powerful when redefining the `Ranges` of a chart to include all of the cells (this can also be used for formulas too).
 - If you know your data has blanks, you can use `End()` to jump to the next non-blank cell. \* This is helpful if you are trying to fill in blank cells (TODO: add the Waterfall fill here)
 
 ##### RangeEnd.md
@@ -76,10 +76,10 @@ End Function
 
 #### Take a subset of an existing `Range` -- `Cells`, `Rows`, `Columns`, `Areas`
 
-The subset functions work by providing you with a Range that is created from another Range based on some condition. They can be quite useful for building a workflow that makes it very explicit how you are trying to iterate through a Range or what you are searching for. The idea is that you know your starting Range contains some pieces that you would like to tierate through. The grouping goes from smallest unit to largest:
+The subset functions work by providing you with a Range that is created from another Range based on some condition. They can be quite useful for building a workflow that makes it very explicit how you are trying to iterate through a Range or what you are searching for. The idea is that you know your starting Range contains some pieces that you would like to iterate through. The grouping goes from smallest unit to largest:
 
 - Cells will return a "flat" list of all cells with in the Range. No grouping left.
-- Rows and Columns will each return a new utterable object built of the previous Range sliced into its Rows or Columns. If call them in order, it will look the same as iterating through Cells except that the order may be difference (TODO: how does this work?). Be sure that if you want to yuse these, avoid the properties with the "s". If you call Row ro Column, you will just get a number instead of a group of Ranges
+- Rows and Columns will each return a new utterable object built of the previous Range sliced into its Rows or Columns. If call them in order, it will look the same as iterating through Cells except that the order may be difference (TODO: how does this work?). Be sure that if you want to use these, avoid the properties with the "s". If you call Row ro Column, you will just get a number instead of a group of Ranges
 - Areas will return a group of cells that may contain groups of Rows or Columns or just individual Cells. Areas are commonly built by users using `CTRL` to select multiple things or by VBA which uses `Union` to build Ranges.
 
 TODO: add some specific code related to Columns and Rows... that code is quite useful as a replacement to Cells(i,j)

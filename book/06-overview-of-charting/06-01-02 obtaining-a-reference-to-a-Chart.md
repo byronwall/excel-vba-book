@@ -1,6 +1,6 @@
 ### obtaining a reference to a Chart
 
-When working with CHarts, the first task is typically to get a reference to an existing chart -- unless you are creating a new chart. To obtain a reference to a chart, there are a handful of ways of doing it depending on what your spreadsheet contains and how it's structured.
+When working with Charts, the first task is typically to get a reference to an existing chart -- unless you are creating a new chart. To obtain a reference to a chart, there are a handful of ways of doing it depending on what your spreadsheet contains and how it's structured.
 
 THe main ways to do it are:
 

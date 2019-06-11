@@ -11,7 +11,7 @@ TODO: look into the Trace functions to see what they return
 
 #### Objects that will return a Range
 
-One of the greatest consistencies throughout VBA and the Object Model is how various objects will return a new object or reference to a useful property. At times, this can save you a large chunk of time trying to recreate that access from scrath. The key then is knowing when these properties exist and how to use them.
+One of the greatest consistencies throughout VBA and the Object Model is how various objects will return a new object or reference to a useful property. At times, this can save you a large chunk of time trying to recreate that access from scratch. The key then is knowing when these properties exist and how to use them.
 
 Below is a rough summary of objects that will give you access to a Range.
 
@@ -32,7 +32,7 @@ There are two ways to work with named ranges. One of them is quite simple: `Rang
 
 For the latter point, the default named ranges have `Workbook` scope and the `Range` call works across the board. This becomes more of an issue when you are using the same name across multiple Worksheets with a Worksheet level scope. You can still access the named ranged, but now your call to `Range`, needs to be `Worksheet.Range` from the correctly scoped Worksheet.
 
-The former ppint about needing to know the name is more often the problem. Sometimes you want to help someone use a named range, but you simply do not know what they are named. One trivial example is creating an addin that outputs all of the named ranges in the Workbook. You cannot iterate them through `Range` because you want to know what they are!
+The former point about needing to know the name is more often the problem. Sometimes you want to help someone use a named range, but you simply do not know what they are named. One trivial example is creating an addin that outputs all of the named ranges in the Workbook. You cannot iterate them through `Range` because you want to know what they are!
 
 When you are in a position where you want to use the named ranges but do not know or want to use the actual names, you can go directly through the `Names` object. There are two ways to do this:
 
@@ -50,15 +50,15 @@ Once you are comfortable accessing named ranges, you may find that it is helpful
 One very useful technique for obtaining a Range is to ask the user for one. This is one of the fastest ways to level up your VBA game because it provides the user control while also making your VBA look pretty slick with the Range picker. The other upside here is that the InputBox Range picker generally works better than the RedEdit version on a form. The odd thing here is two-fold:
 
 - You have to know that InputBOx exists on the Application alone. IF you use the other version, then you cannot supply the Type
-- YOu have to know that Type:=8 allows for a Range selection
+- You have to know that Type:=8 allows for a Range selection
 
-ONce you have two those things down (because you read this book!) then you are able to ask the user to pick a Range with ease. The other very nice thing about the InputBox approach is that you can supply a default address (not Range) and it will automatically be selected at the start. I have used this approach to get effect in bUTL to allow the VBA to process the Selection (by default) or to allow the user to select something different. This is a very clean solution to snivel defaults while also allowing the user to do something different once they read your initial prompt. It is also dead simple to upgrade your current `Set rng = Range()` to `Set rng = Application.InputBox("Select a cell", Type:=8)` instead. For utility type code, the difference in immense in terms of not having to hard code or guess Ranges. Or you can still guess them but provide the user a chance to change the guess.
+Once you have two those things down (because you read this book!) then you are able to ask the user to pick a Range with ease. The other very nice thing about the InputBox approach is that you can supply a default address (not Range) and it will automatically be selected at the start. I have used this approach to get effect in bUTL to allow the VBA to process the Selection (by default) or to allow the user to select something different. This is a very clean solution to snivel defaults while also allowing the user to do something different once they read your initial prompt. It is also dead simple to upgrade your current `Set rng = Range()` to `Set rng = Application.InputBox("Select a cell", Type:=8)` instead. For utility type code, the difference in immense in terms of not having to hard code or guess Ranges. Or you can still guess them but provide the user a chance to change the guess.
 
 TODO: move that Function here form bUTL GetOrSelect...
 
 #### Using `Application.Index`
 
-The `=INDEX` formula is the most potent formula in Excel. Its counterpart in the VBA world is also powerful but less impressive compared to real programming. Having said that, the `Index` function works exactly as expected in VBA and is a very nice tool to have if you are comfortable using INDEX in a normal spreadsheet. The real power of Index is that you can use it to replace a lot of the common code where you iterate through a Range until you find given value. One potential upside of Index is that you can upgrade an Excel only methodology over to VBA with minial change to formulas. Once you have the work converted over, you can then set about addin the details that VBA alone can provide.
+The `=INDEX` formula is the most potent formula in Excel. Its counterpart in the VBA world is also powerful but less impressive compared to real programming. Having said that, the `Index` function works exactly as expected in VBA and is a very nice tool to have if you are comfortable using INDEX in a normal spreadsheet. The real power of Index is that you can use it to replace a lot of the common code where you iterate through a Range until you find given value. One potential upside of Index is that you can upgrade an Excel only methodology over to VBA with minimal change to formulas. Once you have the work converted over, you can then set about addin the details that VBA alone can provide.
 
 TODO: does this work any different than Cells? is it really that useful?
 
@@ -87,7 +87,7 @@ There are a couple of approaches to parsing Ranges from formulas, depending on w
 - Your formulas may contain a sheet name too
 - You want to extract non-range formula information
 
-For the first two, you can build relatively simple parsers which can extract the Range information which good accuracy. The key here is to understand exactly what your formulas look like. The worst case is having to build a full out formulas parser which is a non-trivial exercise. Handling all possible Excel syntaxs is a mess.
+For the first two, you can build relatively simple parsers which can extract the Range information which good accuracy. The key here is to understand exactly what your formulas look like. The worst case is having to build a full out formulas parser which is a non-trivial exercise. Handling all possible Excel syntaxes is a mess.
 
 If you can settle for something less, then you have a couple of approaches at hand:
 

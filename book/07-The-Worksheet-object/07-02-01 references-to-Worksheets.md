@@ -12,7 +12,7 @@ The process for working with Worksheets is the same as all the other Excel Objec
 
 The basic dividing line of the methods above is when you want to access the Worksheet and what you potentially know about it. The simplest approach is when you want some code to run on the ActiveSheet because you can just ask for it. Technically, you can avoid most references to the ActiveSheet use the unqualified global references, but this can be lead to errors later. The business of obtaining a reference to a Worksheet using the other means typically only comes up when you are working with multiple Worksheets. This is quite common to do.
 
-Once you start workign with multiple Worksheets, there are a couple of common things you may want to do:
+Once you start working with multiple Worksheets, there are a couple of common things you may want to do:
 
 - Apply the same action to multiple sheets
 - Process some data on one sheet based on the data on another sheet

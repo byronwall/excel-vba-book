@@ -19,6 +19,6 @@ EndOfCode:
 End Sub
 ```
 
-The rule for labels is that they are required to occur at the front of the lien (no indenting), they must be a single variable name without sapces, and they must end with a colon.
+The rule for labels is that they are required to occur at the front of the lien (no indenting), they must be a single variable name without spaces, and they must end with a colon.
 
 You should go to reasonable lengths to avoid using GoTo statements for anything other than error handling. They are the root of a lot of problems as execution order is concerned.

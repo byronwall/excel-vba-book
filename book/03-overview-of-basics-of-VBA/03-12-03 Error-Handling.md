@@ -13,19 +13,19 @@ The first decision to make is whether or not to allow errors to interrupt execut
 - `On Error Resume Next`, ignore all future errors, just keep trucking
 - `On Error Goto 0`, stop execution immediately at the next error
 
-If you are savvy about searching online for solutions to your problem, you will often see option 1 listed as the "go to" (or is it `GoTo`, ha!) solution for getting around an error. In the technical sense, yes, `On Error Resume NExt` will absolutely get you around an error. It will by definition ignore the error and just keep going with execution. For the vast majority of workflows, this is an awful approach. Very often an error is indciating that something has gone awry from your expectations. If those expectations were reasonable, then it is very likely that future code will not work as intended. Therefore,e if you are getting an error, you should give serious consideration to finding the source of it before you `Resume NExt` through it. Ignoring an error that should have been addressed nearly always causes more pain later.
+If you are savvy about searching online for solutions to your problem, you will often see option 1 listed as the "go to" (or is it `GoTo`, ha!) solution for getting around an error. In the technical sense, yes, `On Error Resume Next` will absolutely get you around an error. It will by definition ignore the error and just keep going with execution. For the vast majority of workflows, this is an awful approach. Very often an error is indicating that something has gone awry from your expectations. If those expectations were reasonable, then it is very likely that future code will not work as intended. Therefore,e if you are getting an error, you should give serious consideration to finding the source of it before you `Resume Next` through it. Ignoring an error that should have been addressed nearly always causes more pain later.
 
-THe other harsh approach to respond to an error is to force execution to stop immediately. This prompts the user with the popup about how to proceed. THis prompt is helpful because it gives two options that may allow you to solve the problem. THe first is `Continue` which will attempt to run the line of code again that cause the issue. If the error still persists, then you will simply get it again. No harm. However, it is also possible to change the state of Excel while the prompt is visible. T his means that if your code was relying on an `ActiveChart` and you did not select one; you will be able to select a chart before hitting `Continue`. This can be a quick way out of a problem if you are confident where the error occurred. If you are programming only for yourself, this can also be a clean way around dealing with waiting for user input using another `GoTo` approach down below. Having said that, allowing a user to deal with an error prompt is absolutely awful in terms of usability.
+THe other harsh approach to respond to an error is to force execution to stop immediately. This prompts the user with the popup about how to proceed. This prompt is helpful because it gives two options that may allow you to solve the problem. THe first is `Continue` which will attempt to run the line of code again that cause the issue. If the error still persists, then you will simply get it again. No harm. However, it is also possible to change the state of Excel while the prompt is visible. T his means that if your code was relying on an `ActiveChart` and you did not select one; you will be able to select a chart before hitting `Continue`. This can be a quick way out of a problem if you are confident where the error occurred. If you are programming only for yourself, this can also be a clean way around dealing with waiting for user input using another `GoTo` approach down below. Having said that, allowing a user to deal with an error prompt is absolutely awful in terms of usability.
 
-The second way you can deal with these error prompts is by hitting `Debug`. This is likely the first response when an error occurs because you are very unlikely to know where the exact error occurs. Once you've seen it however, then you may be able to contue above. THe nice thing about debugging the error is that you get some powerful tools to try and solve the problem. For a full overview of debuggin, check out the other section (TODO: add link). The specific features that are nice for dealing with error sinclude:
+The second way you can deal with these error prompts is by hitting `Debug`. This is likely the first response when an error occurs because you are very unlikely to know where the exact error occurs. Once you've seen it however, then you may be able to contue above. THe nice thing about debugging the error is that you get some powerful tools to try and solve the problem. For a full overview of debugging, check out the other section (TODO: add link). The specific features that are nice for dealing with error sinclude:
 
 - Locals window, which will provide an overview of all the local variables and their current state
 - Set next statement, which will allow you to skip over an error or rerun a line of code whose state may have changed between executions
 - Immediate window, which will allow you to either run arbitrary commands or possibly output information about the program state.
 
-All of htose tools combined should make it possible for you to determine the source of an error. Once you have determine the source of an error, you can then set about resolving the rror, again using the debug tools. Once you have solved the problem, you should give serious consideration to then adding that solution to the code using proper error handling techniques. Again, it is absolutely awful to present the user with an error dialog and expect them to be able to figure it out. Even if you are the user, you will absolutely tire of dealing with error prompts that can be handled with proper handling.
+All of those tools combined should make it possible for you to determine the source of an error. Once you have determine the source of an error, you can then set about resolving the error, again using the debug tools. Once you have solved the problem, you should give serious consideration to then adding that solution to the code using proper error handling techniques. Again, it is absolutely awful to present the user with an error dialog and expect them to be able to figure it out. Even if you are the user, you will absolutely tire of dealing with error prompts that can be handled with proper handling.
 
-If you want to address an error, there are a couple of ways to handle that. They all rely on using the `On Error Goto LABEL` technique. This allows the code execution to jump to a speciif place in your code. That area in your code is then able to do a couple of helpful things:
+If you want to address an error, there are a couple of ways to handle that. They all rely on using the `On Error Goto LABEL` technique. This allows the code execution to jump to a specific place in your code. That area in your code is then able to do a couple of helpful things:
 
 - Query the state of the `Err` object
 - Attempt to address the error and then kick code back to the previous spot
@@ -44,9 +44,9 @@ Although this section is about error handling, the best error handling is an app
 - Attempting to use a property on an object that does not exist
 - Sending invalid parameters to a function
 
-All of those items above have the nice poprerty that you may be able to provide checks for when you will enter an error state. The upside of this pproach is that you can use an `If...Then` statement to check for an error causing state and then step around it. Before using `Range.Value`, you can check that `If Not Range Is Nothing`. `Nothing` is the default value for a reference type before it has been set to a poper reference. You are always going to get an error if you attempt to use a `Nothing`. You can avoid a ton of errors being thrown by simply checking for Nothing and avoiding its use when it appears.
+All of those items above have the nice poprerty that you may be able to provide checks for when you will enter an error state. The upside of this approach is that you can use an `If...Then` statement to check for an error causing state and then step around it. Before using `Range.Value`, you can check that `If Not Range Is Nothing`. `Nothing` is the default value for a reference type before it has been set to a poper reference. You are always going to get an error if you attempt to use a `Nothing`. You can avoid a ton of errors being thrown by simply checking for Nothing and avoiding its use when it appears.
 
-For a lot of arrays and other utterable objects, you have different approaches for checking inf something is a valid index before accessing it. For a `Dictionary`, there is the `Exists` method. For `Worksheets` and other Excel arrays, you are always able to iterate through all of the items to check for existing before then using the index. TODO: add example of iterating sheets. It is very rare for the performances of VBA to be affected by these types of checks. There ar einstances where it is not appropriate, but in general, these techniques work fine.
+For a lot of arrays and other utterable objects, you have different approaches for checking inf something is a valid index before accessing it. For a `Dictionary`, there is the `Exists` method. For `Worksheets` and other Excel arrays, you are always able to iterate through all of the items to check for existing before then using the index. TODO: add example of iterating sheets. It is very rare for the performances of VBA to be affected by these types of checks. There ar instances where it is not appropriate, but in general, these techniques work fine.
 
 #### Application.XXX functions
 
@@ -55,13 +55,13 @@ In some instances, it is possible to trade a runtime error for a return value th
 - Match
 - TODO: any others?
 
-THis can be beneficial because when the function returns an error, you can then turn around and deal with it by checking `IsError`. If the function throws an error instead, you are forced to use proper error handling to catch the error and attempt to resume state.
+This can be beneficial because when the function returns an error, you can then turn around and deal with it by checking `IsError`. If the function throws an error instead, you are forced to use proper error handling to catch the error and attempt to resume state.
 
 #### common VBA errors
 
 TODO: add section about 1004
 
-TODO: add information about ocmpile time errors vs. run time errors.
+TODO: add information about compile time errors vs. run time errors.
 
 #### common Excel errors
 
@@ -69,15 +69,15 @@ In addition to the VBA errors, there are also a number of Excel specific errors 
 
 - Using `ActiveXXX` without have `XXX` selected. This is most common with `ActiveChart` where it is possible to not have a Chart selected. This is not possibly with ActiveWorkbook or ActiveSheet since one will always be active. TODO: what about ActiveCEll?
 - Using `Selection` when the "wrong" thing is selected. It is quite common to `Set` some vriable equal to Selection. If the wrong thing is selected, you will get an error about `Type Mismatch`
-- Attempting to make a selection when it is not valid per the UI. THis is most often the case when you attempt to Select a cell when its Parent Worksheet is not selected.
+- Attempting to make a selection when it is not valid per the UI. This is most often the case when you attempt to Select a cell when its Parent Worksheet is not selected.
 - Attempting to build a Range across Worksheets using `Union`
 - Attempting to iterate through a Range of cells by checking `Range.Value` if the Range can contain errors. If this is possibl you will instead have to check for errors first.
 - Attempting to access or change the `AutoFilter` if is has not been enabled first
 
-Tehre are also a ton of instances where some function returns `Nothing` and you do not check for it. T his most commonly occurs with:
+There are also a ton of instances where some function returns `Nothing` and you do not check for it. T his most commonly occurs with:
 
 - `Range.Find` where nothing was found
 - `Intersect` where the two Ranges do not overlap
 - TODO: add some others?
 
-As a ifnal note, it is owrht mentioning that the sign of a good programmer is one who has a feel for when errors can and cannot occur. You will begin to appreciate when it is needed to add error handling code versus when you know you will not need it. Too often as a beginner, you will be excluding error handling because you are unaware of what can go wrong. As you get better, you will start to exclude error handling because you actually know that no errors can occur. Until you get good, the result may look the same (no error handling code) but the result to the user is prompts and halted execution in one case.
+As a final note, it is owrht mentioning that the sign of a good programmer is one who has a feel for when errors can and cannot occur. You will begin to appreciate when it is needed to add error handling code versus when you know you will not need it. Too often as a beginner, you will be excluding error handling because you are unaware of what can go wrong. As you get better, you will start to exclude error handling because you actually know that no errors can occur. Until you get good, the result may look the same (no error handling code) but the result to the user is prompts and halted execution in one case.

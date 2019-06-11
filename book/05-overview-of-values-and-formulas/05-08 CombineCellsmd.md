@@ -40,7 +40,7 @@ Public Sub CombineCells()
     Next
     Exit Sub
 delimiterError:
-    MsgBox "No Delmiter Selected!"
+    MsgBox "No Delimiter Selected!"
     Exit Sub
 errHandler:
     MsgBox "No Range Selected!"

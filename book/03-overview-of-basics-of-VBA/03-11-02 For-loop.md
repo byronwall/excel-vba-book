@@ -14,20 +14,20 @@ When moving beyond the simple 1 to 10 For loop, there are a handful of options w
 - Use a negative step to go backwards through a list of numbers
 - Use `Exit For` statements to control execution and kick out of the loop
 
-On that last point is where you will see VBA is woefully underpowered compared to "modern" programming languages. VBA does not provide a simple command to `continue` a loop. There is a `Exit For` which can be used to kick out of the loop, but to `continue` you must create a `:LABEL` and use a `Goto LABEL` statement to jump there. There is nothing necessarily worng with this, but it is an approach that is annoying and prone to some mistakes. The biggest issue is accidentally moving the label or having some other position issue. THe annoyance is having to create a label and use a `Goto`. There is nothing inherently wrong with a `Goto` but they provide create power which means awful bugs later.
+On that last point is where you will see VBA is woefully underpowered compared to "modern" programming languages. VBA does not provide a simple command to `continue` a loop. There is a `Exit For` which can be used to kick out of the loop, but to `continue` you must create a `:LABEL` and use a `Goto LABEL` statement to jump there. There is nothing necessarily wrong with this, but it is an approach that is annoying and prone to some mistakes. The biggest issue is accidentally moving the label or having some other position issue. THe annoyance is having to create a label and use a `Goto`. There is nothing inherently wrong with a `Goto` but they provide create power which means awful bugs later.
 
-It is worht noting that the `For Each` loop is a simplification of a `For` loop for a number of instances. In most cases, you could create an index and then iterate through an object by index, storing a reference to the object being stored. Behind the scenes, I believe this is how the majority of internal commands are handled. Despite the 1:1 translation between the two loops, it is typically MUCH simpler to use a `For Each` loop if you just need access to the underlying object in the collection. I will nearly always create an index outside of the loop and use it alongside a `For Each` instead of creating a `For` loop and storing a reference to an object. It always seems vastly simpler to store an Integer than an object. Aside from the marginal advantage of not calling `Set`, there is a immediate payoff of a `For Each` loop that if you name the variables correctly, you can typically read exactly what the code will do. This pays dividends for yourself and others later when reviewing the code.
+It is worth noting that the `For Each` loop is a simplification of a `For` loop for a number of instances. In most cases, you could create an index and then iterate through an object by index, storing a reference to the object being stored. Behind the scenes, I believe this is how the majority of internal commands are handled. Despite the 1:1 translation between the two loops, it is typically MUCH simpler to use a `For Each` loop if you just need access to the underlying object in the collection. I will nearly always create an index outside of the loop and use it alongside a `For Each` instead of creating a `For` loop and storing a reference to an object. It always seems vastly simpler to store an Integer than an object. Aside from the marginal advantage of not calling `Set`, there is a immediate payoff of a `For Each` loop that if you name the variables correctly, you can typically read exactly what the code will do. This pays dividends for yourself and others later when reviewing the code.
 
 It is also worth mentioning that there are a handful of instances where you are typically required to use a For loop even if you want to use the object being used. The standard example here is if you will eb modified the collection that you are iterating. In this case, you will rapidly create iteration issues trying to modify the collection inside the loop using it. In some of those cases, you will get runtime errors, but in others you will just get unintended consequences. The most common example of doing this is when you want to delete items from a collection while iterating through it. Let's say you need to check whether an item meets some criteria before deleting it. There are two ways to handle this:
 
-- Use a For loop and run thought eh collection BACKWARDS. The direction is critical because it means that at wrost, you are working at the end of the list which will not affect future operations.
+- Use a For loop and run thought eh collection BACKWARDS. The direction is critical because it means that at worst, you are working at the end of the list which will not affect future operations.
 - Use a "dual loop" approach.
 
-An example of item 1 is sjown below.
+An example of item 1 is shown below.
 
 TODO: add example of backward loop
 
-The dual loop approach is worth mentioning further since sometimes it can give you an elegant way out of a bind. The idea is that instead of modifying the collection while you iterate it, you store some amount of information outside of the collection and then use that to determine what to delete. This typically only works if the items being deleted exist independently of the collection that holds them. This happens often enough with Excel that it is worht giving a concrete example: deleting Rows from a Worksheet. To handle this dual loop approach, there are two possible options:
+The dual loop approach is worth mentioning further since sometimes it can give you an elegant way out of a bind. The idea is that instead of modifying the collection while you iterate it, you store some amount of information outside of the collection and then use that to determine what to delete. This typically only works if the items being deleted exist independently of the collection that holds them. This happens often enough with Excel that it is worth giving a concrete example: deleting Rows from a Worksheet. To handle this dual loop approach, there are two possible options:
 
 - Use one loop to create a collection that stores the rows to be deleted and then iterate that collection in a new loop
 - Build a larger Range to delete as you go and then use an Excel function to handle the actual deletion
@@ -36,6 +36,6 @@ The latter option is only technically a "dual" loop. Technically Excel will use 
 
 TODO: add an example of the Collection approach for deleting Ranges
 
-TODO: add an example of the UNION-DELETE approach for dleeting ranges.
+TODO: add an example of the UNION-DELETE approach for deleting ranges.
 
 TODO: add some examples of For loops and how they might be used

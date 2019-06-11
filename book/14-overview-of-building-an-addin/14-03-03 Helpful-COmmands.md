@@ -1,4 +1,4 @@
-### Helpful COmmands
+### Helpful Commands
 
 There are a couple of commands that exist outside of addins that become far more useful inside the addin. They are included below for reference:
 

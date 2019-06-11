@@ -1,4 +1,4 @@
-### Application.EnableEvents = FAlse
+### Application.EnableEvents = False
 
 One of the biggest gotchas with Events is that you can quickly and accidentally create an endless loop of Event code running if your event handler is able to retirgger the original event. This is quite common if you are looking at the Selection and then change the selected cell. The same can happen if you are using an event to watch for a change and then you respond with additional changes. Both of these accidents are so common, that you should seriously consider always disabling events in your handler. It is quite rare that you will need an other event to fire following your own processing.
 
