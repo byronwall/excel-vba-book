@@ -1,5 +1,9 @@
 ## Colorize.md
 
+The Sub below makes it possible to applied a banded row coloring based on changing values in the rows. That is, it looks at the value in a given cell and compares it to the cell above. If the value has changed, it applies the next color. If the same, it will apply the same color as the row above. This gives a simple demonstration of how it's possible to create simple or complicated formatting rules with VBA.
+
+TODO: clean up the code below to simplify the process and show only the core bits needed.
+
 ```vb
 Public Sub Colorize()
 

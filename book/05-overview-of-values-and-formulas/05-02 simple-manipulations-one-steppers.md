@@ -1,6 +1,11 @@
 ## simple manipulations (one steppers)
 
-This section will focus on simple manipulations. Simple manipulations generally take a two step process: identify a `Range` to work with and then do something to that `Range`. In a lot of cases, the `Range` contains multiple cells and may be iterated through a cell at a time to apply the action.
+This section will focus on simple manipulations. Simple manipulations generally take a two step process:
+
+1. Identify a `Range` to work with
+2. Do something to that `Range`
+
+In a lot of cases, the `Range` contains multiple cells and may be iterated through a cell at a time to apply the action.
 
 These simple manipulations truly are simple. It includes things like:
 

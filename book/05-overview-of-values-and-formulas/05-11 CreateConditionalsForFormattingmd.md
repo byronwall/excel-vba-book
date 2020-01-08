@@ -1,5 +1,7 @@
 ## CreateConditionalsForFormatting.md
 
+TODO: find a better location for this code. Somewhere formatting related?
+
 ```vb
 Public Sub CreateConditionalsForFormatting()
 
