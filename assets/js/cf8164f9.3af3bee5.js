@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[191],{8592:function(e){e.exports=JSON.parse('{"allTagsPath":"/excel-vba-book/blog/tags","slug":"/excel-vba-book/blog/tags/hello","name":"hello","count":2,"permalink":"/excel-vba-book/blog/tags/hello"}')}}]);
