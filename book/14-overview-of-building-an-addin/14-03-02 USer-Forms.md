@@ -1,5 +1,0 @@
-### USer Forms
-
-One of the nice features of an addin are adding custom forms to provide the user with a better experience. Creating a UserForm in VBA is dead simple, and this is the best bang for your buck in terms of creating a professional looking product. The simplest of forms with the simplest of features can save the end user hours and hours of time (I've seen it happen).
-
-The nice thing here is that creating a UserForm in an addin is not any different than creating them normally. You simply create the UserForm. The only extra step is that you need to manage how/when the form is created and what information it has access to. Typically this is done by adding a button or using a keyboard shortcut. The only other issue is that you need to be aware of which Workbook or Worksheet is active when opening a UserForm if you are using ActiveSheet or ActiveWorkbook for anything. In general, inside an addin, you need to be careful with this commands since it is not always obvious that the ActiveXXX is the one you want to access.

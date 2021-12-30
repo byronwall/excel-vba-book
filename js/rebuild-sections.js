@@ -6,7 +6,7 @@ function createConcatFile() {
   const fileContents = [];
 
   glob("../book/**/*.md", (err, files) => {
-    files.forEach(file => {
+    files.forEach((file) => {
       console.log(file);
       fileContents.push(fs.readFileSync(file, "utf-8"));
     });
@@ -34,7 +34,6 @@ function splitConcatIntoSections() {
 
   var chapter = 0;
   var section = 0;
-  var subsection = 0;
 
   var currentLines = [];
   var currentFile = "";
@@ -44,12 +43,11 @@ function splitConcatIntoSections() {
   // TODO: determine the name of that file
   // TODO: write a new file each time a new section is hit that starts a new one
 
-  lines.forEach(line => {
+  lines.forEach((line) => {
     // match line against markdown header section
 
     const firstHeader = /^\s*#(?!#)\s*(.*)/gm;
     const secondHeader = /^\s*##(?!#)\s*(.*)/gm;
-    const thirdHeader = /^\s*###(?!#)\s*(.*)/gm;
 
     if (firstHeader.test(line)) {
       if (currentFile != "") {
@@ -60,7 +58,6 @@ function splitConcatIntoSections() {
 
       chapter++;
       section = 0;
-      subsection = 0;
 
       firstHeader.lastIndex = 0;
       var res = firstHeader.exec(line);
@@ -90,7 +87,6 @@ function splitConcatIntoSections() {
       currentLines = [];
 
       section++;
-      subsection = 0;
 
       secondHeader.lastIndex = 0;
       var res = secondHeader.exec(line);
@@ -106,36 +102,13 @@ function splitConcatIntoSections() {
         ".md";
 
       // write the previous file which contains # header info
-    } else if (thirdHeader.test(line)) {
-      subsection++;
-
-      var textToWrite = currentLines.join("\n");
-      fs.writeFileSync(currentPath + currentFile, textToWrite, "utf-8");
-      currentLines = [];
-
-      thirdHeader.lastIndex = 0;
-      var res = thirdHeader.exec(line);
-
-      var subsectionName = res[1];
-
-      currentFile =
-        numeral(chapter).format("00") +
-        "-" +
-        numeral(section).format("00") +
-        "-" +
-        numeral(subsection).format("00") +
-        " " +
-        cleanName(subsectionName) +
-        ".md";
-
-      // write the previous file which contains # header info
     }
 
     currentLines.push(line);
   });
 }
 
-var cleanName = function(name) {
+var cleanName = function (name) {
   name = name.replace(/\s+/gi, "-"); // Replace white space with dash
   return name.replace(/[^a-zA-Z0-9\-]/gi, ""); // Strip any special charactere
 };

@@ -1,7 +1,0 @@
-### beware of UDFs in addins
-
-A personal addin is a great way to organize helper code without constantly created macro enabled files to use the code. For Subs this works great because there is no lasting trace that a Sub was run, at least in terms of code in the file. For a UDF however, your UDF call will be a part of the spreadsheet. This does not force the spreadsheet to be a macro enabled one -- which is great -- but it does mean that anyone using the spreadsheet needs access to the UDF code. This creates a problem when you get comfortable using UDFs in an addin but then save the workbook with them in there. You have effectively "polluted" the workbook with addin UDF names which may or may not be available to others. This is fine if the addin truly is critical to the workbook, but it can create a mess for others if you're using UDFs for your own help and make a spreadsheet that others cannot use.
-
-The solution to this problem is to simply save the UDF as a Module in the spreadsheet, but this requires you to save the Workbook as macro enabled.
-
-A rule I like to follow is simply: if I know that a UDF is required for the spreadsheet and that UDF is currently in an addin, I force myself to move the code into the Workbook and save as macro enabled. This can be a pain, but it's all too common that a Workbook is saved with a UDF from an addin, that addin changes or becomes unavailable, and now your Workbook is broken. It's best to avoid this scenario especially if you work with others who are not macro savvy.
